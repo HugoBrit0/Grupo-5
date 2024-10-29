@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Signup";
+}
+
+<link rel="stylesheet" href="~/css/form.css">
+
+<div class="center-screen">
+    <form class="form" method="post">
+        <div class="form-element">
+            <h2>@ViewData["Title"]</h2>
+        </div>
+
+        <div class="form-element">
+            <input type="text" name="name" placeholder="Name" required>
+        </div>
+
+        <div class="form-element">
+            <input type="email" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="form-element">
+            <input type="password" name="password" required placeholder="Password">
+        </div>
+
+        <div class="form-element">
+            <input type="password" name="confirm_password" required placeholder="Confirm Password">
+        </div>
+
+        <div class="form-element">
+            <p>Already a member? <a href="/Login">Login</a></p>
+        </div>
+
+        @if (ViewBag.Error != null)
+        {
+            <div class="form-element">
+                <p style="color:red;">@ViewBag.Error</p>
+            </div>
+        }
+
+        <div class="form-element">
+            <button name="submit" type="submit">Signup</button>
+        </div>
+    </form>
+</div>

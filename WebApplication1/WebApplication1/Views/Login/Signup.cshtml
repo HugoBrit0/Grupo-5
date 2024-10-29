@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Registar";
+}
+
+<link rel="stylesheet" href="~/css/form.css">
+<div class="center-screen">
+    <form method="post" action="#">
+        <div class="form-element">
+            <h2>Registar</h2>
+        </div>
+
+        <div class="form-element">
+            <input type="text" name="name" placeholder="Nome" required />
+        </div>
+
+        <div class="form-element">
+            <input type="email" name="email" placeholder="Email" required />
+        </div>
+
+        <div class="form-element">
+            <input type="password" name="password" placeholder="Password" required />
+        </div>
+
+        <div class="form-element">
+            <div class="form-element">
+                <button type="submit">Registar</button>
+            </div>
+        </div>
+
+        <div class="form-element">
+            <p>Já tens uma conta? <a href="/Login">Login</a></p>
+        </div>
+    </form>
+</div>

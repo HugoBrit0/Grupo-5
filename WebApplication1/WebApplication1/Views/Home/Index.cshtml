@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/form.css" asp-append-version="true" />
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+
+    <header class="bg-primary text-white text-center py-5">
+        <h1>Bem-vindo à Nossa Loja de Carros e Motas</h1>
+        <p>A sua plataforma para comprar e vender veículos!</p>
+        <a href="/Signup" class="btn btn-light btn-lg">Registe-se</a>
+        <a href="/Login" class="btn btn-light btn-lg">Login</a>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Carros">Carros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Motas">Motas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Contactos">Contactos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <h2>Destaques</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="~/images/carro1.jpg" class="card-img-top" alt="Carro 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Audi a34</h5>
+                        <p class="card-text">Audi A4 B5 1.9 TDI, ideal para quem busca conforto e desempenho em longas viagens. Equipado com sistema de navegação e interiores em couro de alta qualidade, este carro proporciona uma experiência de condução premium.</p>
+                        <a href="@Url.Action("Details", "Cars", new { id = 1 })" class="btn btn-primary">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="~/images/carro2.jpg" class="card-img-top" alt="Carro 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Volkswagen Golf</h5>
+                        <p class="card-text">Volkswagen Golf 7, conhecido pela sua eficiência de combustível e conforto. Com um motor de 1.4 TSI, este carro é perfeito para uso urbano, oferecendo uma condução suave e ágil.</p>
+                        <a href="@Url.Action("Details", "Cars", new { id = 2 })" class="btn btn-primary">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="~/images/carro3.jpg" class="card-img-top" alt="Carro 3">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW Série 3</h5>
+                        <p class="card-text">BMW Série 3, um ícone de esportividade e elegância. Equipado com tração traseira e um motor potente, este carro é ideal para quem aprecia desempenho sem comprometer o conforto.</p>
+                        <a href="@Url.Action("Details", "Cars", new { id = 3 })" class="btn btn-primary">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-light text-center py-4">
+        <p>© 2024 Loja de Carros e Motas. Todos os direitos reservados.</p>
+        <p><a href="/Contactos">Contacte-nos</a></p>
+    </footer>
+
+    <script src="~/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+</body>
+</html>

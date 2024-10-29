@@ -1,0 +1,15 @@
+﻿<!-- Caminho: Views/Cars/Details.cshtml -->
+@model YourNamespace.Models.Car
+
+<div class="container">
+    <h1>@Model.Name</h1>
+    <p>@Model.Description</p>
+
+    <h3>Imagem Principal</h3>
+    <img src="@Model.MainImageUrl" alt="Imagem Principal" class="img-fluid mb-3" />
+
+    <h3>Imagem Adicional</h3>
+    <img src="@Model.AdditionalImageUrl" alt="Imagem Adicional" class="img-fluid mb-3" />
+
+    <a href="@Url.Action("Index", "Cars")" class="btn btn-primary">Voltar</a>
+</div>

@@ -1,0 +1,19 @@
+﻿<!-- Caminho: Views/Cars/Index.cshtml -->
+@model IEnumerable<YourNamespace.Models.Car>
+
+<h1>Destaques</h1>
+<div class="row">
+    @foreach (var car in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="@car.MainImageUrl" class="card-img-top" alt="Imagem Principal">
+                <div class="card-body">
+                    <h5 class="card-title">@car.Name</h5>
+                    <p class="card-text">@car.Description</p>
+                    <a href="@Url.Action("Details", "Cars", new { id = car.Id })" class="btn btn-primary">Ver mais</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
