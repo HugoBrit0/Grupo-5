@@ -1,27 +1,42 @@
-﻿// Caminho: Startup.cs
-public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
+public class Startup
 {
-    if (env.IsDevelopment())
+    public void ConfigureServices(IServiceCollection services)
     {
-        app.UseDeveloperExceptionPage();
-    }
-    else
-    {
-        app.UseExceptionHandler("/Home/Error");
-        app.UseHsts();
+        services.AddControllersWithViews();
     }
 
-    app.UseHttpsRedirection();
-    app.UseStaticFiles();
-
-    app.UseRouting();
-
-    app.UseAuthorization();
-
-    app.UseEndpoints(endpoints =>
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
-        endpoints.MapControllerRoute(
-            name: "default",
-            pattern: "{controller=Cars}/{action=Index}/{id?}");
-    });
+        if (env.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+        else
+        {
+            app.UseExceptionHandler("/Home/Error");
+            app.UseHsts();
+        }
+
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+
+        app.UseRouting();
+        app.UseAuthorization();
+
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            endpoints.MapControllerRoute(
+                name: "ads",
+                pattern: "{controller=Ads}/{action=Index}/{id?}");
+        });
+    }
 }
