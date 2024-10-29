@@ -45,6 +45,22 @@
       "PackagePath": "staticwebassets\\images\\carspeeding.jpg"
     },
     {
+      "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\images\\historia.png",
+      "PackagePath": "staticwebassets\\images\\historia.png"
+    },
+    {
+      "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\images\\testemunho1.jpg",
+      "PackagePath": "staticwebassets\\images\\testemunho1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\images\\testemunho2.jpg",
+      "PackagePath": "staticwebassets\\images\\testemunho2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\images\\testemunho3.jpg",
+      "PackagePath": "staticwebassets\\images\\testemunho3.jpg"
+    },
+    {
       "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

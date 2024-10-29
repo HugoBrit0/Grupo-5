@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home"; 
+    ViewData["Title"] = "Home";
 }
 
 <!DOCTYPE html>
@@ -8,74 +8,80 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="~/css/bootstrap.min.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/form.css" asp-append-version="true" />
-    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <title>@ViewData["Title"] - Loja de Carros e Motas</title>
+    <style>
+        /* Estilos adicionais */
+        body {
+            background-color: #f8f9fa; /* Cor de fundo do site */
+        }
+
+        .story-section {
+            background-color: #ffffff; /* Cor de fundo da seção "A Nossa História" */
+            padding: 2rem 0; /* Adiciona espaço interno */
+            border-radius: 8px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+            .story-section img {
+                transition: transform 0.3s;
+            }
+
+                .story-section img:hover {
+                    transform: scale(1.05);
+                }
+
+        .faq-section {
+            background-color: #ffffff; /* Cor de fundo da seção FAQ */
+            padding: 2rem 0; /* Adiciona espaço interno */
+            border-radius: 8px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+    </style>
 </head>
 <body>
-
-
-    
-    <header class="text-white text-center py-5 position-relative">
-        <h1>Bem-vindo à Nossa Loja de Carros e Motas</h1>
-        <p>A sua plataforma para comprar e vender veículos!</p>
-        <a href="/Signup" class="btn btn-light btn-lg">Registe-se</a>
-        <a href="/Login" class="btn btn-light btn-lg">Login</a>
+    <!-- Cabeçalho com imagem de fundo -->
+    <header class="text-white text-center py-5" style="background: url('~/images/carspeeding.jpg') no-repeat center center / cover; position: relative; margin-top: 0;" data-aos="fade-down">
+        <div class="bg-overlay"></div>
+        <div class="container">
+            <h1 class="display-4">Bem-vindo à Nossa Loja de Carros e Motas</h1>
+            <p class="lead">A sua plataforma para comprar e vender veículos!</p>
+            <a href="/Signup" class="btn btn-light btn-lg mx-2">Registe-se</a>
+            <a href="/Login" class="btn btn-light btn-lg mx-2">Login</a>
+        </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="/">Home</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Carros">Carros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Motas">Motas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Contactos">Contactos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Login">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+    <!-- Conteúdo principal com cards de destaques -->
     <main class="container my-5">
-        <h2>Destaques</h2>
+        <h2 class="text-center mb-4" data-aos="fade-up">Destaques</h2>
         <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card shadow-sm">
                     <img src="~/images/carro1.jpg" class="card-img-top" alt="Carro 1">
                     <div class="card-body">
-                        <h5 class="card-title">Audi a34</h5>
-                        <p class="card-text">Audi A4 B5 1.9 TDI, ideal para quem busca conforto e desempenho em longas viagens. Equipado com sistema de navegação e interiores em couro de alta qualidade, este carro proporciona uma experiência de condução premium.</p>
+                        <h5 class="card-title">Audi A4</h5>
+                        <p class="card-text">Audi A4 B5 1.9 TDI, ideal para quem procura conforto e desempenho em longas viagens.</p>
                         <a href="@Url.Action("Details", "Cars", new { id = 1 })" class="btn btn-primary">Ver mais</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card shadow-sm">
                     <img src="~/images/carro2.jpg" class="card-img-top" alt="Carro 2">
                     <div class="card-body">
                         <h5 class="card-title">Volkswagen Golf</h5>
-                        <p class="card-text">Volkswagen Golf 7, conhecido pela sua eficiência de combustível e conforto. Com um motor de 1.4 TSI, este carro é perfeito para uso urbano, oferecendo uma condução suave e ágil.</p>
+                        <p class="card-text">Volkswagen Golf 7, conhecido pela sua eficiência de combustível e conforto.</p>
                         <a href="@Url.Action("Details", "Cars", new { id = 2 })" class="btn btn-primary">Ver mais</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card shadow-sm">
                     <img src="~/images/carro3.jpg" class="card-img-top" alt="Carro 3">
                     <div class="card-body">
                         <h5 class="card-title">BMW Série 3</h5>
-                        <p class="card-text">BMW Série 3, um ícone de esportividade e elegância. Equipado com tração traseira e um motor potente, este carro é ideal para quem aprecia desempenho sem comprometer o conforto.</p>
+                        <p class="card-text">BMW Série 3, um ícone de desportividade e elegância.</p>
                         <a href="@Url.Action("Details", "Cars", new { id = 3 })" class="btn btn-primary">Ver mais</a>
                     </div>
                 </div>
@@ -83,11 +89,101 @@
         </div>
     </main>
 
-    <footer class="bg-light text-center py-4">
-        <p>© 2024 Loja de Carros e Motas. Todos os direitos reservados.</p>
-        <p><a href="/Contactos">Contacte-nos</a></p>
-    </footer>
+    <!-- Seção da História -->
+    <section class="story-section py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center mb-4">A Nossa História</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4" data-aos="fade-right">
+                    <img src="~/images/historia.png" class="img-fluid rounded shadow" alt="História da Empresa">
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <p class="lead">Desde a nossa fundação, temos trabalhado para oferecer os melhores veículos aos nossos clientes. A nossa missão é proporcionar uma experiência de compra e venda sem igual, com um serviço ao cliente excepcional.</p>
+                    <p>Com uma vasta gama de opções de carros e motos, garantimos que há algo para cada gosto e necessidade. Agradecemos por escolher a nossa loja e por fazer parte da nossa história!</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Seção de FAQs -->
+    <section class="faq-section py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center mb-4">Perguntas Frequentes (FAQ)</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Como posso comprar um carro?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Para comprar um carro, você pode navegar pela nossa coleção online, selecionar o veículo que deseja e seguir o processo de compra indicado no site.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Quais são os métodos de pagamento disponíveis?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Aceitamos várias formas de pagamento, incluindo transferência bancária, cartão de crédito e pagamentos em espécie.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            A loja oferece garantia nos veículos?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sim, todos os nossos veículos vêm com garantia, que varia de acordo com o modelo e ano do carro. Verifique os detalhes na descrição do veículo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Seção de Utilizadores Satisfeitos -->
+    <section class="testimonials-section py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center mb-4">Utilizadores Satisfeitos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card shadow-sm">
+                        <img src="~/images/testemunho1.jpg" class="img-fluid rounded-circle" alt="Cliente 1">
+                        <p class="testimonial-text">"Comprei o meu Audi A4 aqui e não poderia estar mais feliz! Atendimento excepcional e preços justos."</p>
+                        <h5 class="client-name">João Silva</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card shadow-sm">
+                        <img src="~/images/testemunho2.jpg" class="img-fluid rounded-circle" alt="Cliente 2">
+                        <p class="testimonial-text">"A experiência de compra foi incrível. Recomendo a todos que procuram um carro novo!"</p>
+                        <h5 class="client-name">Maria Santos</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card shadow-sm">
+                        <img src="~/images/testemunho3.jpg" class="img-fluid rounded-circle" alt="Cliente 3">
+                        <p class="testimonial-text">"Excelentes serviços e um grande leque de veículos. Adorei o meu novo carro!"</p>
+                        <h5 class="client-name">Carlos Pereira</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        // Inicializar AOS
+        AOS.init();
+    </script>
     <script src="~/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Contactos";
+}
+
+<div class="container">
+    <h1>Contacte-nos</h1>
+    <p>Estamos disponíveis para responder a todas as tuas questões e ajudar-te. Utiliza as informações abaixo para nos contactar:</p>
+
+    <h3>Informações de Contacto</h3>
+    <ul>
+        <li><strong>Email:</strong> suporte@cargarage.com</li>
+        <li><strong>Telefone:</strong> +351 123 456 789</li>
+        <li><strong>Morada:</strong> Rua das Flores, 123, Lisboa, Portugal</li>
+    </ul>
+
+    <h3>Formulário de Contacto</h3>
+    <form method="post" action="/Contactos/EnviarMensagem">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="mensagem" class="form-label">Mensagem</label>
+            <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+    </form>
+</div>

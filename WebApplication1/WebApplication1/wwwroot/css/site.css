@@ -1,28 +1,114 @@
-html {
-    font-size: 14px;
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
+.container {
+    flex: 1; /* Faz o container ocupar o espaço disponível */
+}
+
+header {
+    color: white; /* Cor do texto do cabeçalho */
+    padding: 20px 0; /* Espaçamento do cabeçalho */
+}
+
+footer {
+    background-color: #f8f9fa; /* Cor de fundo do footer */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Espaçamento do footer */
+    border-top: 1px solid #eaeaea; /* Linha superior do footer */
+    margin-top: auto; /* Faz o footer ficar no final da página */
+}
+
+    footer p {
+        margin: 0; /* Remove margens do parágrafo */
+        color: #333; /* Cor do texto do footer */
     }
+
+    footer a {
+        color: #007bff; /* Cor do link */
+        text-decoration: none; /* Remove sublinhado do link */
+    }
+
+        footer a:hover {
+            text-decoration: underline; /* Sublinha ao passar o mouse */
+        }
+
+/* Adiciona um estilo ao título */
+h1 {
+    color: #ffcc00; /* Cor chamativa para o título */
 }
 
-.btn:focus,
-.btn:active:focus,
-.btn-link.nav-link:focus,
-.form-control:focus,
-.form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+/* Remove margens ou padding extras dos elementos do container */
+.main-container {
+    margin-bottom: 0; /* Remove a margem inferior */
 }
 
-html {
-    position: relative;
-    min-height: 100%;
+/* Para evitar barras desnecessárias */
+.row {
+    margin-right: 0;
+    margin-left: 0;
 }
 
-body {
-    margin-bottom: 60px;
+.card {
+    margin-bottom: 20px; /* Espaçamento entre os cards */
 }
 
-/* Outros estilos podem ser adicionados abaixo */
+/* Estilos dos botões */
+.btn-outline-light {
+    border-color: #ffffff; /* Borda branca */
+    color: #ffffff; /* Cor do texto */
+}
+
+    .btn-outline-light:hover {
+        background-color: #ffffff; /* Fundo branco ao passar o mouse */
+        color: #007bff; /* Cor do texto ao passar o mouse */
+    }
+/* Estilos da seção da história */
+.story-section {
+    background-color: white; /* Cor de fundo da seção */
+    padding: 60px 0; /* Espaçamento superior e inferior */
+}
+
+    .story-section h2 {
+        color: #333; /* Cor do título da seção */
+    }
+
+    .story-section img {
+        max-width: 100%; /* Para garantir que a imagem não exceda o contêiner */
+    }
+
+        .story-section img:hover {
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse na imagem */
+        }
+
+.testimonials-section {
+    background-color: #ffffff; /* Fundo branco */
+    padding: 30px 0; /* Adiciona espaço em cima e em baixo */
+}
+
+.testimonial-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    background-color: #ffffff; /* Fundo branco para os cartões */
+    border: 1px solid #e0e0e0; /* Borda leve para os cartões */
+}
+
+    .testimonial-card:hover {
+        transform: scale(1.05);
+    }
+
+.testimonial-text {
+    font-style: italic;
+    margin: 15px 0;
+}
+
+.client-name {
+    font-weight: bold;
+}
+
+
