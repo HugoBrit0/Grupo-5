@@ -9,12 +9,12 @@
       "PackagePath": "staticwebassets\\Startup.cs"
     },
     {
-      "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\css\\form.css",
-      "PackagePath": "staticwebassets\\css\\form.css"
+      "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\css\\#form.css",
+      "PackagePath": "staticwebassets\\css\\#form.css"
     },
     {
-      "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\css\\form.css",
+      "PackagePath": "staticwebassets\\css\\form.css"
     },
     {
       "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\favicon.ico",

@@ -2,27 +2,110 @@
     ViewData["Title"] = "Login";
 }
 
-<link rel="stylesheet" href="~/css/form.css">
-<div class="center-screen">
-    <form method="post" action="#">
-        <div class="form-element">
-            <h2>Login</h2>
-        </div>
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/form.css">
+    <title>@ViewData["Title"] - CarGarage</title>
+    <style>
+        body {
+            background-color: #f8f9fa; /* Fundo claro */
+            font-family: 'Arial', sans-serif;
+        }
 
-        <div class="form-element">
-            <input type="email" name="email" placeholder="Email" required />
-        </div>
+        .center-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Altura total da tela */
+        }
 
-        <div class="form-element">
-            <input type="password" name="password" placeholder="Password" required />
-        </div>
+        .login-form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px; /* Limitar a largura do formulário */
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Transição suave */
+            opacity: 0; /* Começa invisível */
+            transform: translateY(-30px); /* Transição suave para cima */
+        }
 
-        <div class="form-element">
-            <p>Não tens uma conta? <a href="/Signup">Registar</a></p>
-        </div>
+            .login-form.show {
+                opacity: 1; /* Torna visível */
+                transform: translateY(0); /* Retorna à posição original */
+            }
 
-        <div class="form-element">
-            <button type="submit">Login</button>
-        </div>
-    </form>
-</div>
+        .form-element {
+            margin-bottom: 15px;
+        }
+
+            .form-element input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ced4da;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            .form-element button {
+                width: 100%;
+                padding: 10px;
+                background-color: #007bff; /* Cor do botão */
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+                .form-element button:hover {
+                    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+                }
+
+            .form-element p {
+                text-align: center;
+                margin-top: 10px;
+            }
+    </style>
+</head>
+<body>
+    <div class="center-screen">
+        <form method="post" action="#" class="login-form" id="login-form">
+            <div class="form-element">
+                <h2>Login</h2>
+            </div>
+
+            <div class="form-element">
+                <input type="email" name="email" placeholder="Email" required />
+            </div>
+
+            <div class="form-element">
+                <input type="password" name="password" placeholder="Password" required />
+            </div>
+
+            <div class="form-element">
+                <p>Não tens uma conta? <a href="/Signup">Registar</a></p>
+            </div>
+
+            <div class="form-element">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#login-form').addClass('show'); // Adiciona a classe show para ativar o efeito
+        });
+    </script>
+</body>
+</html>

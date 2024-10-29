@@ -29,20 +29,27 @@
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
+        transition: border-color 0.3s; /* Efeito de transição suave */
     }
+
+        .form-element input:focus {
+            border-color: #007bff; /* Cor da borda ao focar */
+            outline: none; /* Remove o contorno padrão */
+        }
 
     .form-element button {
         width: 100%;
         padding: 10px;
-        background-color: #28a745;
+        background-color: #28a745; /* Cor do botão */
         color: white;
         border: none;
         border-radius: 5px;
-        cursor: pointer;
+        cursor: pointer; /* Muda o cursor ao passar o mouse */
+        transition: background-color 0.3s; /* Efeito de transição suave */
     }
 
         .form-element button:hover {
-            background-color: #218838;
+            background-color: #218838; /* Cor do botão ao passar o mouse */
         }
 
 h2 {
@@ -53,9 +60,9 @@ h2 {
 p {
     text-align: center;
 }
+
 .card-img-top {
     width: 100%; /* Faz com que a imagem ocupe toda a largura do card */
     height: 200px; /* Definindo uma altura fixa */
     object-fit: cover; /* Mantém a proporção da imagem, cortando o excesso se necessário */
 }
-

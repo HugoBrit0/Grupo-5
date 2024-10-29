@@ -2,31 +2,83 @@
     ViewData["Title"] = "Contactos";
 }
 
-<div class="container">
-    <h1>Contacte-nos</h1>
-    <p>Estamos disponíveis para responder a todas as tuas questões e ajudar-te. Utiliza as informações abaixo para nos contactar:</p>
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - CarGarage</title>
+    <style>
+        body {
+            background-color: #ffffff; /* Fundo branco */
+            font-family: 'Arial', sans-serif;
+        }
 
-    <h3>Informações de Contacto</h3>
-    <ul>
-        <li><strong>Email:</strong> suporte@cargarage.com</li>
-        <li><strong>Telefone:</strong> +351 123 456 789</li>
-        <li><strong>Morada:</strong> Rua das Flores, 123, Lisboa, Portugal</li>
-    </ul>
+        .fade-in {
+            opacity: 0; /* Começa invisível */
+            transition: opacity 0.5s; /* Efeito de transição */
+        }
 
-    <h3>Formulário de Contacto</h3>
-    <form method="post" action="/Contactos/EnviarMensagem">
-        <div class="mb-3">
-            <label for="nome" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="nome" name="nome" required>
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-        </div>
-        <div class="mb-3">
-            <label for="mensagem" class="form-label">Mensagem</label>
-            <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-    </form>
-</div>
+        .fade-in.show {
+            opacity: 1; /* Torna visível */
+        }
+
+        .container h1, .container h3 {
+            margin-top: 20px;
+        }
+
+        .btn {
+            margin-top: 20px;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-list li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5 fade-in" id="contact-container">
+        <h1>Contacte-nos</h1>
+        <p>Estamos disponíveis para responder a todas as tuas questões e ajudar-te. Utiliza as informações abaixo para nos contactar:</p>
+
+        <h3>Informações de Contacto</h3>
+        <ul class="info-list">
+            <li><strong>Email:</strong> suporte@cargarage.com</li>
+            <li><strong>Telefone:</strong> +351 123 456 789</li>
+            <li><strong>Morada:</strong> Rua das Flores, 123, Lisboa, Portugal</li>
+        </ul>
+
+        <h3>Formulário de Contacto</h3>
+        <form method="post" action="/Contactos/EnviarMensagem">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+        </form>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#contact-container').addClass('show'); // Adiciona a classe show para ativar o fade-in
+        });
+    </script>
+</body>
+</html>
