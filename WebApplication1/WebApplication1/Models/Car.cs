@@ -1,4 +1,5 @@
-﻿// Caminho: Models/Car.cs
+﻿using System.Collections.Generic;
+
 namespace YourNamespace.Models
 {
     public class Car
@@ -6,9 +7,9 @@ namespace YourNamespace.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public string MainImageUrl { get; set; }
+        public string MainImageUrl { get; set; } // Adicione esta linha
 
-        // Campo para armazenar a imagem adicional
-        public string AdditionalImageUrl { get; set; }
+        // Lista de URLs para imagens adicionais
+        public List<string> ImageUrls { get; set; } = new List<string>();
     }
 }

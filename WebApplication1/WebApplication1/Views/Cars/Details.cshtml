@@ -1,15 +1,64 @@
-﻿<!-- Caminho: Views/Cars/Details.cshtml -->
-@model YourNamespace.Models.Car
+﻿@model YourNamespace.Models.Car
 
-<div class="container">
-    <h1>@Model.Name</h1>
-    <p>@Model.Description</p>
+<div class="container my-4">
+    <h1 class="text-center mb-4">@Model.Name</h1>
 
-    <h3>Imagem Principal</h3>
-    <img src="@Model.MainImageUrl" alt="Imagem Principal" class="img-fluid mb-3" />
+    <!-- Descrição e Edição -->
+    <div class="mb-4">
+        <h3>Descrição</h3>
+        <p id="descriptionText">@Model.Description</p>
+        <button id="editDescriptionButton" class="btn btn-warning" onclick="toggleDescriptionEdit()">Editar Descrição</button>
 
-    <h3>Imagem Adicional</h3>
-    <img src="@Model.AdditionalImageUrl" alt="Imagem Adicional" class="img-fluid mb-3" />
+        <form asp-action="UpdateDescription" method="post" id="descriptionForm" style="display: none;">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <div class="form-group">
+                <textarea name="description" class="form-control" rows="3">@Model.Description</textarea>
+            </div>
+            <button type="submit" class="btn btn-success mt-2">Salvar</button>
+            <button type="button" class="btn btn-secondary mt-2" onclick="toggleDescriptionEdit()">Cancelar</button>
+        </form>
+    </div>
 
-    <a href="@Url.Action("Index", "Cars")" class="btn btn-primary">Voltar</a>
+    <!-- Formulário para Upload de Imagem -->
+    <div class="mb-4">
+        <h3>Adicionar Imagem</h3>
+        <form asp-action="UploadImage" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <div class="form-group">
+                <input type="file" name="imageFile" class="form-control-file" required />
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Carregar Imagem</button>
+        </form>
+    </div>
+
+    <!-- Galeria de Imagens -->
+    <div class="mb-4">
+        <h3>Galeria de Imagens</h3>
+        <div class="row">
+            @foreach (var imageUrl in Model.ImageUrls)
+            {
+                <div class="col-md-4 mb-3">
+                    <img src="@imageUrl" class="img-fluid" alt="Imagem do carro" />
+                </div>
+            }
+        </div>
+    </div>
+
+    <script>
+        function toggleDescriptionEdit() {
+            const descriptionText = document.getElementById("descriptionText");
+            const editButton = document.getElementById("editDescriptionButton");
+            const form = document.getElementById("descriptionForm");
+
+            if (form.style.display === "none") {
+                form.style.display = "block";
+                descriptionText.style.display = "none";
+                editButton.style.display = "none";
+            } else {
+                form.style.display = "none";
+                descriptionText.style.display = "block";
+                editButton.style.display = "inline-block";
+            }
+        }
+    </script>
 </div>

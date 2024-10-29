@@ -1,33 +1,66 @@
-﻿// Caminho: Controllers/CarsController.cs
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using YourNamespace.Models;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using YourNamespace.Models;
 
-namespace YourNamespace.Controllers
+public class CarsController : Controller
 {
-    public class CarsController : Controller
+    private readonly IWebHostEnvironment _env;
+
+    // Simulação de lista de carros (pode substituir por contexto de dados)
+    private static List<Car> Cars = new List<Car>
     {
-        // Simulação de dados dos carros
-        private List<Car> cars = new List<Car>
-        {
-            new Car { Id = 1, Name = "Carro 1", Description = "Descrição breve do carro 1.", MainImageUrl = "/images/car1.jpg", AdditionalImageUrl = "/images/car1_additional.jpg" },
-            new Car { Id = 2, Name = "Carro 2", Description = "Descrição breve do carro 2.", MainImageUrl = "/images/car2.jpg", AdditionalImageUrl = "/images/car2_additional.jpg" },
-            new Car { Id = 3, Name = "Carro 3", Description = "Descrição breve do carro 3.", MainImageUrl = "/images/car3.jpg", AdditionalImageUrl = "/images/car3_additional.jpg" }
-        };
+        new Car { Id = 1, Name = "Carro 1", Description = "Descrição inicial do carro 1" },
+        new Car { Id = 2, Name = "Carro 2", Description = "Descrição inicial do carro 2" },
+        new Car { Id = 3, Name = "Carro 3", Description = "Descrição inicial do carro 3" }
+        // Adicione outros carros conforme necessário
+    };
 
-        public IActionResult Index()
+    public CarsController(IWebHostEnvironment env)
+    {
+        _env = env;
+    }
+
+    public IActionResult Details(int id)
+    {
+        var car = Cars.FirstOrDefault(c => c.Id == id);
+        if (car == null) return NotFound();
+
+        return View(car);
+    }
+
+    [HttpPost]
+    public IActionResult UpdateDescription(int id, string description)
+    {
+        var car = Cars.FirstOrDefault(c => c.Id == id);
+        if (car == null) return NotFound();
+
+        car.Description = description; // Atualiza a descrição do carro
+        return RedirectToAction("Details", new { id }); // Redireciona para a página de detalhes
+    }
+
+    [HttpPost]
+    public IActionResult UploadImage(int id, IFormFile imageFile)
+    {
+        var car = Cars.FirstOrDefault(c => c.Id == id);
+        if (car == null || imageFile == null) return RedirectToAction("Details", new { id });
+
+        // Caminho para armazenar imagens
+        var uploadsFolder = Path.Combine(_env.WebRootPath, "uploads");
+        Directory.CreateDirectory(uploadsFolder);
+
+        var uniqueFileName = $"{Guid.NewGuid()}_{imageFile.FileName}";
+        var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+        using (var fileStream = new FileStream(filePath, FileMode.Create))
         {
-            return View(cars);
+            imageFile.CopyTo(fileStream);
         }
 
-        public IActionResult Details(int id)
-        {
-            var car = cars.Find(c => c.Id == id);
-            if (car == null)
-            {
-                return NotFound();
-            }
-            return View(car);
-        }
+        car.ImageUrls.Add($"/uploads/{uniqueFileName}");
+        return RedirectToAction("Details", new { id });
     }
 }
