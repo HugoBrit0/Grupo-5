@@ -1,25 +1,29 @@
-﻿@{
+﻿@model List<WebApplication1.Models.AdViewModel>
+
+@{
     ViewData["Title"] = "Anúncios Disponíveis";
 }
 
-<div class="container my-5">
-    <h2 class="text-center mb-4">Anúncios Disponíveis</h2>
+<h2>Anúncios Disponíveis</h2>
+
+<div class="container mt-4">
     <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Audi A4">
-                <div class="card-body">
-                    <h5 class="card-title">Audi A4</h5>
-                    <p class="card-text">Audi A4, ano 2020, muito bem conservado.</p>
-                    <p class="card-text"><strong>Preço:</strong> 25,000 €</p>
-                    <p class="card-text"><strong>Contacto:</strong> 123456789</p>
+        @foreach (var ad in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    @if (!string.IsNullOrEmpty(ad.ImagePath))
+                    {
+                        <img src="@ad.ImagePath" class="card-img-top" alt="Imagem do Anúncio" style="max-height: 200px; object-fit: cover;" />
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">Marca: @ad.Marca</h5>
+                        <p class="card-text">Quilometragem: @ad.Quilometragem km</p>
+                        <p class="card-text">Ano: @ad.Ano</p>
+                        <p class="card-text">Estado: @ad.Estado</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Repete este bloco para outros anúncios -->
-    </div>
-
-    <div class="text-center mt-4">
-        <a href="/Ads/Create" class="btn btn-primary">Criar Novo Anúncio</a>
+        }
     </div>
 </div>

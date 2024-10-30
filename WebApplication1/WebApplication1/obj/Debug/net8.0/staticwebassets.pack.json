@@ -21,6 +21,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\images\\6479313f-4686-40f0-a189-21413b348ba2_carro1.jpg",
+      "PackagePath": "staticwebassets\\images\\6479313f-4686-40f0-a189-21413b348ba2_carro1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\images\\77f7bcab-8c36-4fe2-88be-f1d2cf4cc0af_JuiceWRLD.jpg",
+      "PackagePath": "staticwebassets\\images\\77f7bcab-8c36-4fe2-88be-f1d2cf4cc0af_JuiceWRLD.jpg"
+    },
+    {
       "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\images\\Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
       "PackagePath": "staticwebassets\\images\\Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png"
     },

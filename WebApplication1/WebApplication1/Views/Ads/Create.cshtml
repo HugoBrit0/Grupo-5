@@ -1,19 +1,43 @@
-﻿@{
+﻿@model WebApplication1.Models.AdViewModel
+
+@{
     ViewData["Title"] = "Criar Anúncio";
 }
 
-<h1>Criar Anúncio</h1>
+<h2>Criar Anúncio</h2>
 
-<form asp-action="Create" method="post" enctype="multipart/form-data">
+<form asp-action="Create" method="post" enctype="multipart/form-data" class="mt-4">
     <div class="form-group">
-        <label for="imageFile">Escolher imagem</label>
-        <input type="file" name="imageFile" class="form-control" required />
+        <label for="Marca">Marca</label>
+        <select asp-for="Marca" class="form-control">
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Volkswagen">Volkswagen</option>
+        </select>
     </div>
-    <button type="submit" class="btn btn-primary">Upload</button>
-</form>
+    <div class="form-group">
+        <label for="Quilometragem">Quilometragem</label>
+        <input type="number" asp-for="Quilometragem" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Ano">Ano</label>
+        <input type="number" asp-for="Ano" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Estado">Estado</label>
+        <select asp-for="Estado" class="form-control">
+            <option value="Novo">Novo</option>
+            <option value="Usado">Usado</option>
+            <option value="Semi-novo">Semi-novo</option>
+        </select>
+    </div>
+    <hr />
+    <div class="form-group">
+        <label for="imageFile">Imagem do Carro</label>
+        <input type="file" name="imageFile" class="form-control-file" />
+    </div>
+    <hr />
+    <button type="submit" class="btn btn-primary">Criar Anúncio</button>
 
-@if (ViewBag.ImagePath != null)
-{
-        <h3>Imagem Carregada:</h3>
-        <img src="@ViewBag.ImagePath" alt="Imagem do anúncio" style="max-width: 100%; height: auto;" />
-}
+</form>

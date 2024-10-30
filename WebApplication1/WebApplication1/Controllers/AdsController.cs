@@ -1,53 +1,64 @@
 ﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using System.IO;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
+using System.IO;
+using WebApplication1.Models;
 
-public class AdsController : Controller
+namespace WebApplication1.Controllers
 {
-    private readonly IWebHostEnvironment _environment;
-
-    public AdsController(IWebHostEnvironment environment)
+    public class AdsController : Controller
     {
-        _environment = environment;
-    }
+        private static List<AdViewModel> _ads = new List<AdViewModel>();
+        private readonly IWebHostEnvironment _environment;
 
-    // GET: /Ads
-    public IActionResult Index()
-    {
-        return View();
-    }
-
-    // GET: /Ads/Create
-    public IActionResult Create()
-    {
-        return View();
-    }
-
-    // POST: /Ads/Create
-    [HttpPost]
-    public async Task<IActionResult> Create(IFormFile imageFile)
-    {
-        if (imageFile != null && imageFile.Length > 0)
+        public AdsController(IWebHostEnvironment environment)
         {
-            var uploadsFolder = Path.Combine(_environment.WebRootPath, "images");
-
-            if (!Directory.Exists(uploadsFolder))
-                Directory.CreateDirectory(uploadsFolder);
-
-            var fileName = $"{Guid.NewGuid()}_{imageFile.FileName}";
-            var filePath = Path.Combine(uploadsFolder, fileName);
-
-            using (var fileStream = new FileStream(filePath, FileMode.Create))
-            {
-                await imageFile.CopyToAsync(fileStream);
-            }
-
-            ViewBag.ImagePath = $"/images/{fileName}";
+            _environment = environment;
         }
 
-        return View();
+        // GET: /Ads
+        public IActionResult Index()
+        {
+            return View(_ads); // Passa a lista de anúncios para a view
+        }
+
+        // GET: /Ads/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: /Ads/Create
+        [HttpPost]
+        public IActionResult Create(AdViewModel ad, IFormFile imageFile)
+        {
+            if (ModelState.IsValid)
+            {
+                if (imageFile != null && imageFile.Length > 0)
+                {
+                    var uploadsFolder = Path.Combine(_environment.WebRootPath, "uploads");
+                    if (!Directory.Exists(uploadsFolder))
+                    {
+                        Directory.CreateDirectory(uploadsFolder);
+                    }
+
+                    var uniqueFileName = $"{Guid.NewGuid()}_{imageFile.FileName}";
+                    var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        imageFile.CopyTo(stream);
+                    }
+
+                    ad.ImagePath = $"/uploads/{uniqueFileName}"; // Caminho relativo da imagem
+                }
+
+                _ads.Add(ad);
+                return RedirectToAction("Index");
+            }
+
+            return View(ad);
+        }
     }
 }
