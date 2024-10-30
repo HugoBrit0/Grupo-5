@@ -1,15 +1,38 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WebApplication1.Data;
 
 namespace WebApplication1
 {
     public class Startup
     {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+
         public void ConfigureServices(IServiceCollection services)
         {
-            // Adiciona serviços MVC
+            // Adicionar o contexto da base de dados com a string de conexão
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            // Configuração da autenticação com cookies
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.Cookie.Name = "CarGarageAuth";
+                    options.LoginPath = "/Login"; // Página de login
+                });
+
+            // Adicionar o suporte para MVC
             services.AddControllersWithViews();
         }
 
@@ -27,7 +50,11 @@ namespace WebApplication1
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
             app.UseRouting();
+
+            // Ativar autenticação e autorização
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -41,7 +68,6 @@ namespace WebApplication1
                     pattern: "Ads/{action=Index}/{id?}",
                     defaults: new { controller = "Ads", action = "Index" });
             });
-
         }
     }
 }
