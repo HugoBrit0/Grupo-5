@@ -10,9 +10,11 @@ namespace WebApplication1.Controllers
 {
     public class AdsController : Controller
     {
+        // Lista estática para armazenar os anúncios temporariamente
         private static List<AdViewModel> _ads = new List<AdViewModel>();
         private readonly IWebHostEnvironment _environment;
 
+        // Construtor
         public AdsController(IWebHostEnvironment environment)
         {
             _environment = environment;
@@ -54,11 +56,11 @@ namespace WebApplication1.Controllers
                     ad.ImagePath = $"/uploads/{uniqueFileName}"; // Caminho relativo da imagem
                 }
 
-                _ads.Add(ad);
-                return RedirectToAction("Index");
+                _ads.Add(ad); // Adiciona o anúncio à lista
+                return RedirectToAction("Index"); // Redireciona para a página de listagem de anúncios
             }
 
-            return View(ad);
+            return View(ad); // Retorna para o formulário de criação em caso de erro
         }
     }
 }

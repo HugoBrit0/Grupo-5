@@ -32,12 +32,36 @@
             <option value="Semi-novo">Semi-novo</option>
         </select>
     </div>
-    <hr />
     <div class="form-group">
         <label for="imageFile">Imagem do Carro</label>
         <input type="file" name="imageFile" class="form-control-file" />
     </div>
-    <hr />
     <button type="submit" class="btn btn-primary">Criar Anúncio</button>
-
 </form>
+
+<h2>Anúncios Disponíveis</h2>
+
+<div class="container mt-4">
+    <div class="row">
+        @if (ViewData["Ads"] is List<WebApplication1.Models.AdViewModel> ads)
+        {
+            foreach (var ad in ads)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        @if (!string.IsNullOrEmpty(ad.ImagePath))
+                        {
+                            <img src="@ad.ImagePath" class="card-img-top" alt="Imagem do Anúncio" style="max-height: 200px; object-fit: cover;" />
+                        }
+                        <div class="card-body">
+                            <h5 class="card-title">Marca: @ad.Marca</h5>
+                            <p class="card-text">Quilometragem: @ad.Quilometragem km</p>
+                            <p class="card-text">Ano: @ad.Ano</p>
+                            <p class="card-text">Estado: @ad.Estado</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

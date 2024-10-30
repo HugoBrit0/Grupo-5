@@ -41,6 +41,7 @@ namespace WebApplication1
                     pattern: "Ads/{action=Index}/{id?}",
                     defaults: new { controller = "Ads", action = "Index" });
             });
+
         }
     }
 }
