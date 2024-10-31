@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using WebApplication1.Models; // Certifique-se de que este namespace corresponda ao local do AdViewModel
+
 using WebApplication1.Models;
 
 namespace WebApplication1.Controllers

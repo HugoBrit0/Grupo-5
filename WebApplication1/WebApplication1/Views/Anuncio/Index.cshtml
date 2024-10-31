@@ -1,0 +1,35 @@
+﻿@model IEnumerable<WebApplication1.Models.Anuncio>
+
+<h2>Lista de Anúncios</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Descrição</th>
+            <th>Imagem</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var anuncio in Model)
+        {
+            <tr>
+                <td>@anuncio.Titulo</td>
+                <td>@anuncio.Descricao</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(anuncio.ImagePath))
+                    {
+                        <img src="@anuncio.ImagePath" alt="@anuncio.Titulo" style="width: 100px;" />
+                    }
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = anuncio.Id }) |
+                    @Html.ActionLink("Excluir", "Delete", new { id = anuncio.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create")" class="btn btn-success">Criar Novo Anúncio</a>

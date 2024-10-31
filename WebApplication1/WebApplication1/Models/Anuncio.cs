@@ -2,8 +2,10 @@
 
 namespace WebApplication1.Models
 {
-    public class AdViewModel
+    public class Anuncio
     {
+        public int Id { get; set; }
+
         [Required]
         [StringLength(100)]
         public string Titulo { get; set; }
@@ -11,6 +13,6 @@ namespace WebApplication1.Models
         [Required]
         public string Descricao { get; set; }
 
-        public string ImagePath { get; set; } // Para armazenar o caminho da imagem
+        public string? ImagePath { get; set; } // Torna a propriedade opcional
     }
 }
