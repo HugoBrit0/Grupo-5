@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplication1.Controllers  // O namespace do teu projeto
+namespace WebApplication1.Controllers 
 {
+    [Authorize] 
     public class LocationController : Controller
     {
-        // GET: Location
+        
         public IActionResult Index()
         {
             return View();

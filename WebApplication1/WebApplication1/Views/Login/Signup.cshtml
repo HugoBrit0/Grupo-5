@@ -12,7 +12,7 @@
     <title>@ViewData["Title"] - CarGarage</title>
     <style>
         body {
-            background-color: #f8f9fa; /* Fundo claro */
+            background-color: #f8f9fa;
             font-family: 'Arial', sans-serif;
         }
 
@@ -20,7 +20,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Altura total da tela */
+            height: 100vh; 
         }
 
         .signup-form {
@@ -29,15 +29,15 @@
             border-radius: 10px;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 400px; /* Limitar a largura do formulário */
-            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Transição suave */
-            opacity: 0; /* Começa invisível */
-            transform: translateY(-30px); /* Transição suave para cima */
+            max-width: 400px; 
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+            opacity: 0;
+            transform: translateY(-30px); 
         }
 
             .signup-form.show {
-                opacity: 1; /* Torna visível */
-                transform: translateY(0); /* Retorna à posição original */
+                opacity: 1; 
+                transform: translateY(0); 
             }
 
         .form-element {
@@ -55,7 +55,7 @@
             .form-element button {
                 width: 100%;
                 padding: 10px;
-                background-color: #007bff; /* Cor do botão */
+                background-color: #007bff; 
                 color: white;
                 border: none;
                 border-radius: 5px;
@@ -65,7 +65,7 @@
             }
 
                 .form-element button:hover {
-                    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+                    background-color: #0056b3; 
                 }
 
             .form-element p {
@@ -107,7 +107,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#signup-form').addClass('show'); // Adiciona a classe show para ativar o efeito
+            $('#signup-form').addClass('show'); 
         });
     </script>
 </body>

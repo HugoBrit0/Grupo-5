@@ -7,9 +7,9 @@ namespace YourNamespace.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public string MainImageUrl { get; set; } // Adicione esta linha
+        public string MainImageUrl { get; set; } 
 
-        // Lista de URLs para imagens adicionais
+       
         public List<string> ImageUrls { get; set; } = new List<string>();
     }
 }

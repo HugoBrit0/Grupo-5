@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,31 +9,31 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
+    [Authorize] 
     public class AdsController : Controller
     {
-        // Lista estática para armazenar os anúncios temporariamente
+       
         private static List<AdViewModel> _ads = new List<AdViewModel>();
         private readonly IWebHostEnvironment _environment;
 
-        // Construtor
+        
         public AdsController(IWebHostEnvironment environment)
         {
             _environment = environment;
         }
 
-        // GET: /Ads
+        
         public IActionResult Index()
         {
-            return View(_ads); // Passa a lista de anúncios para a view
+            return View(_ads); 
         }
 
-        // GET: /Ads/Create
+        
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: /Ads/Create
         [HttpPost]
         public IActionResult Create(AdViewModel ad, IFormFile imageFile)
         {
@@ -53,14 +54,14 @@ namespace WebApplication1.Controllers
                         imageFile.CopyTo(stream);
                     }
 
-                    ad.ImagePath = $"/uploads/{uniqueFileName}"; // Caminho relativo da imagem
+                    ad.ImagePath = $"/uploads/{uniqueFileName}"; 
                 }
 
-                _ads.Add(ad); // Adiciona o anúncio à lista
-                return RedirectToAction("Index"); // Redireciona para a página de listagem de anúncios
+                _ads.Add(ad);
+                return RedirectToAction("Index"); 
             }
 
-            return View(ad); // Retorna para o formulário de criação em caso de erro
+            return View(ad);
         }
     }
 }

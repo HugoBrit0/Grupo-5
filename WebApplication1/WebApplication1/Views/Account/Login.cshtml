@@ -1,4 +1,6 @@
-﻿@{
+﻿@model WebApplication1.Models.LoginViewModel
+
+@{
     ViewData["Title"] = "Login";
 }
 
@@ -13,7 +15,7 @@
     <title>@ViewData["Title"] - CarGarage</title>
     <style>
         body {
-            background-color: #f8f9fa; 
+            background-color: #f8f9fa;
             font-family: 'Arial', sans-serif;
         }
 
@@ -21,7 +23,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; 
+            height: 100vh;
         }
 
         .login-form {
@@ -77,17 +79,20 @@
 </head>
 <body>
     <div class="center-screen">
-        <form method="post" action="#" class="login-form" id="login-form">
+        <form method="post" asp-action="Login" class="login-form" id="login-form">
             <div class="form-element">
                 <h2>Login</h2>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             </div>
 
             <div class="form-element">
-                <input type="email" name="email" placeholder="Email" required />
+                <input type="text" asp-for="Username" placeholder="Username" required />
+                <span asp-validation-for="Username" class="text-danger"></span>
             </div>
 
             <div class="form-element">
-                <input type="password" name="password" placeholder="Password" required />
+                <input type="password" asp-for="Password" placeholder="Password" required />
+                <span asp-validation-for="Password" class="text-danger"></span>
             </div>
 
             <div class="form-element">
@@ -107,5 +112,11 @@
             $('#login-form').addClass('show'); 
         });
     </script>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
 </body>
 </html>

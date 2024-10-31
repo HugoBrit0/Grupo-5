@@ -10,8 +10,21 @@ namespace WebApplication1.Data
         {
         }
 
-        public DbSet<Admin> Admins { get; set; }
+        public DbSet<AdminUser> AdminUsers { get; set; }
 
-        // Adicione outras DbSets conforme necessário
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<AdminUser>().HasData(
+                new AdminUser
+                {
+                    Id = 1,
+                    Username = "admin",
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("admin123"),
+                    Email = "admin@example.com"
+                }
+            );
+        }
     }
 }
