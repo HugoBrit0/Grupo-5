@@ -10,7 +10,8 @@ namespace WebApplication1.Data
         {
         }
 
-        // Aqui deve estar a DbSet para o seu modelo Administrador
-        public DbSet<Administrador> Administrador { get; set; } // <-- Certifique-se de que esta linha está presente
+        public DbSet<Admin> Admins { get; set; }
+
+        // Adicione outras DbSets conforme necessário
     }
 }
