@@ -1,27 +1,122 @@
 ﻿@model WebApplication1.Models.AdViewModel
 
-<h2>Criar Anúncio</h2>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criar Anúncio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
 
-@using (Html.BeginForm("Create", "Anuncio", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.AntiForgeryToken()
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Titulo)
-        @Html.TextBoxFor(m => m.Titulo, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Titulo)
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s ease; /* Efeito de transição */
+        }
+
+            input[type="text"]:focus,
+            textarea:focus {
+                border-color: #007bff; /* Azul ao focar */
+            }
+
+        input[type="file"] {
+            border: none; /* Remove a borda padrão */
+        }
+
+        button {
+            background-color: #007bff; /* Azul */
+            color: white; /* Texto branco */
+            padding: 10px 15px; /* Espaçamento interno */
+            border: none; /* Remove a borda */
+            border-radius: 4px; /* Bordas arredondadas */
+            cursor: pointer; /* Muda o cursor ao passar o mouse */
+            transition: background-color 0.3s ease; /* Efeito de transição */
+        }
+
+            button:hover {
+                background-color: #0056b3; /* Azul escuro ao passar o mouse */
+            }
+
+        .alert {
+            background-color: #f8d7da; /* Fundo vermelho claro */
+            color: #721c24; /* Texto vermelho escuro */
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Criar Anúncio</h2>
+
+        @using (Html.BeginForm("Create", "Anuncio", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert">
+                    <strong>Erros:</strong><br />
+                    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        <div>@error.ErrorMessage</div>
+                    }
+                </div>
+            }
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Titulo)
+                @Html.TextBoxFor(m => m.Titulo, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Titulo)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Descricao)
+                @Html.TextAreaFor(m => m.Descricao, new { @class = "form-control", rows = "4" }) <!-- Ajuste no tamanho -->
+                @Html.ValidationMessageFor(m => m.Descricao)
+            </div>
+
+            <div class="form-group">
+                <label>Imagem</label>
+                <input type="file" name="imageFile" class="form-control" />
+            </div>
+
+            <button type="submit">Salvar</button>
+        }
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Descricao)
-        @Html.TextAreaFor(m => m.Descricao, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Descricao)
-    </div>
-
-    <div class="form-group">
-        <label>Imagem</label>
-        <input type="file" name="imageFile" class="form-control" />
-    </div>
-
-    <button type="submit" class="btn btn-primary">Salvar</button>
-}
+</body>
+</html>

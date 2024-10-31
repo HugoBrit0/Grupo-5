@@ -11,7 +11,7 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
-    [Authorize] // Garante que apenas usuários autenticados possam acessar este controlador
+    [Authorize]
     public class AnuncioController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -36,37 +36,54 @@ namespace WebApplication1.Controllers
         {
             if (ModelState.IsValid)
             {
-                var anuncio = new Anuncio
+                try
                 {
-                    Titulo = ad.Titulo,
-                    Descricao = ad.Descricao,
-                    ImagePath = null // Inicializa como nulo
-                };
-
-                if (imageFile != null && imageFile.Length > 0)
-                {
-                    var uploadsFolder = Path.Combine(_environment.WebRootPath, "uploads");
-                    if (!Directory.Exists(uploadsFolder))
+                    var anuncio = new Anuncio
                     {
-                        Directory.CreateDirectory(uploadsFolder);
+                        Titulo = ad.Titulo,
+                        Descricao = ad.Descricao,
+                        ImagePath = null // Inicializa como nulo
+                    };
+
+                    if (imageFile != null && imageFile.Length > 0)
+                    {
+                        var uploadsFolder = Path.Combine(_environment.WebRootPath, "uploads");
+                        if (!Directory.Exists(uploadsFolder))
+                        {
+                            Directory.CreateDirectory(uploadsFolder);
+                        }
+
+                        var uniqueFileName = $"{Guid.NewGuid()}_{imageFile.FileName}";
+                        var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await imageFile.CopyToAsync(stream);
+                        }
+
+                        anuncio.ImagePath = $"/uploads/{uniqueFileName}"; // Define o caminho da imagem
                     }
 
-                    var uniqueFileName = $"{Guid.NewGuid()}_{imageFile.FileName}";
-                    var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await imageFile.CopyToAsync(stream);
-                    }
+                    _context.Anuncios.Add(anuncio); // Adiciona o anúncio ao contexto
+                    await _context.SaveChangesAsync(); // Salva as alterações no banco de dados
 
-                    anuncio.ImagePath = $"/uploads/{uniqueFileName}"; // Define o caminho da imagem
+                    return RedirectToAction("Index"); // Redireciona para a lista de anúncios
                 }
-
-                _context.Anuncios.Add(anuncio); // Adiciona o anúncio ao contexto
-                await _context.SaveChangesAsync(); // Salva as alterações no banco de dados
-                return RedirectToAction("Index"); // Redireciona para a lista de anúncios
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", $"Erro ao salvar o anúncio: {ex.Message}");
+                }
+            }
+            else
+            {
+                // Log os erros do ModelState
+                var errors = ModelState.Values.SelectMany(v => v.Errors);
+                foreach (var error in errors)
+                {
+                    Console.WriteLine(error.ErrorMessage); // Log dos erros do ModelState
+                }
             }
 
-            return View(ad);
+            return View(ad); // Retorna a view com os erros se ModelState não for válido
         }
 
         // GET: Anuncio/Index
