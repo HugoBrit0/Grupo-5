@@ -11,26 +11,26 @@ using WebApplication1.Models; // Certifique-se de que este namespace corresponda
 
 namespace WebApplication1.Controllers
 {
-    [Authorize] 
+    [Authorize]
     public class AdsController : Controller
     {
-       
+
         private static List<AdViewModel> _ads = new List<AdViewModel>();
         private readonly IWebHostEnvironment _environment;
 
-        
+
         public AdsController(IWebHostEnvironment environment)
         {
             _environment = environment;
         }
 
-        
+
         public IActionResult Index()
         {
-            return View(_ads); 
+            return View(_ads);
         }
 
-        
+
         public IActionResult Create()
         {
             return View();
@@ -56,11 +56,11 @@ namespace WebApplication1.Controllers
                         imageFile.CopyTo(stream);
                     }
 
-                    ad.ImagePath = $"/uploads/{uniqueFileName}"; 
+                    ad.ImagePath = $"/uploads/{uniqueFileName}";
                 }
 
                 _ads.Add(ad);
-                return RedirectToAction("Index"); 
+                return RedirectToAction("Index");
             }
 
             return View(ad);

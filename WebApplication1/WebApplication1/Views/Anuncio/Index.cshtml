@@ -1,115 +1,43 @@
 ﻿@model IEnumerable<WebApplication1.Models.Anuncio>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista de Anúncios</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
+@{
+    ViewData["Title"] = "Lista de Anúncios";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Criar Novo Anúncio</a>
+    <a href="@Url.Action("Index", "Anuncio", new { nocache = DateTime.Now.Ticks })" class="btn btn-secondary">Atualizar Lista</a>
+</p>
+
+@if (Model.Any())
+{
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    @if (!string.IsNullOrEmpty(item.ImagePath))
+                    {
+                        <img src="@item.ImagePath" class="card-img-top" alt="@item.Titulo">
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Titulo</h5>
+                        <p class="card-text">@item.Descricao</p>
+                        <p class="card-text"><small class="text-muted">Estado: @item.EstadoCarro</small></p>
+                        <p class="card-text"><small class="text-muted">Quilometragem: @item.Quilometragem km</small></p>
+                        <p class="card-text"><small class="text-muted">Telefone: @item.Telefone</small></p>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Editar</a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Detalhes</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Excluir</a>
+                    </div>
+                </div>
+            </div>
         }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse; /* Remove espaços entre as células */
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: left; /* Alinhamento à esquerda */
-            border-bottom: 1px solid #ddd; /* Linha separadora entre as linhas da tabela */
-        }
-
-        th {
-            background-color: #007bff; /* Azul para cabeçalho */
-            color: white; /* Texto branco no cabeçalho */
-        }
-
-        img {
-           width:100px; 
-           height:auto; 
-           border-radius:.25em 
-       }
-       
-       a.btn {
-           display:inline-block; 
-           background-color:#28a745; 
-           color:white; 
-           padding:.5em .75em; 
-           text-decoration:none; 
-           border-radius:.25em; 
-           transition:.3s ease-in-out
-       }
-       
-       a.btn:hover { 
-           background-color:#218838 
-       }
-       
-       .btn-danger { 
-           background-color:#dc3545 
-       }
-       
-       .btn-danger:hover { 
-           background-color:#c82333 
-       }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <h2>Lista de Anúncios</h2>
-
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Título</th>
-                <th>Descrição</th>
-                <th>Imagem</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var anuncio in Model)
-            {
-                <tr>
-                    <td>@anuncio.Titulo</td>
-                    <td>@anuncio.Descricao</td>
-                    <td>
-                        @if (!string.IsNullOrEmpty(anuncio.ImagePath))
-                        {
-                            <img src="@anuncio.ImagePath" alt="@anuncio.Titulo" />
-                        }
-                    </td>
-                    <td>
-                        @Html.ActionLink("Editar", "Edit", new { id = anuncio.Id }, new { @class = "btn btn-primary" }) |
-                        @Html.ActionLink("Excluir", "Delete", new { id = anuncio.Id }, new { @class = "btn btn-danger" })
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-
-    <a href="@Url.Action("Create")" class="btn">Criar Novo Anúncio</a>
-</div>
-
-</body>
-</html>
+    </div>
+}
+else
+{
+    <p>Nenhum anúncio encontrado.</p>
+}
