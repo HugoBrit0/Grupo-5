@@ -9,7 +9,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Titulo" class="control-label"></label>
@@ -23,7 +23,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="EstadoCarro" class="control-label"></label>
-                <input asp-for="EstadoCarro" class="form-control" />
+                <select asp-for="EstadoCarro" class="form-control" asp-items="@(new SelectList(ViewBag.EstadosCarro))">
+                    <option value="">Selecione o estado do carro</option>
+                </select>
                 <span asp-validation-for="EstadoCarro" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -37,7 +39,11 @@
                 <span asp-validation-for="Telefone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Criar" class="btn btn-primary" />
+                <label for="imagem" class="control-label">Imagem do Carro</label>
+                <input type="file" id="imagem" name="imagem" class="form-control-file" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
