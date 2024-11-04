@@ -3,68 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\views\\anuncio\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\anuncio\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\views\\anuncio\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\anuncio\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\controllers\\anunciocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\anunciocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\models\\anuncioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\anuncioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\models\\anuncio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\anuncio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\models\\adviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\adviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\controllers\\anunciocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\anunciocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\controllers\\contactoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\contactoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\controllers\\adscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\adscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\views\\anuncio\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\anuncio\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\models\\adminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\adminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\wwwroot\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\wwwroot\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\models\\anuncioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\anuncioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\models\\adviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\adviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|c:\\users\\gonca\\source\\repos\\grupo-5\\webapplication1\\webapplication1\\controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D17590C-0B01-46E2-B4D5-27976CDFD2C5}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -79,209 +67,170 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Views\\Anuncio\\Delete.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Anuncio\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Views\\Anuncio\\Delete.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Anuncio\\Delete.cshtml",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAmwDMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-03T02:18:46.61Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AnuncioController.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\AnuncioController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\AnuncioController.cs",
-              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\AnuncioController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\AnuncioController.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAmwGgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T22:20:26.86Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Anuncio.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Models\\Anuncio.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\Anuncio.cs",
-              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Models\\Anuncio.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\Anuncio.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAA6wBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T22:20:02.598Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Program.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
-              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Program.cs",
-              "RelativeToolTip": "WebApplication1\\Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAmwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T11:41:58.324Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Views\\Anuncio\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Anuncio\\Create.cshtml",
-              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Views\\Anuncio\\Create.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Anuncio\\Create.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAmwDwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-31T22:21:37.081Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "WebApplication1\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAmwEUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T22:22:24.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AdsController.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\AdsController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\AdsController.cs",
-              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\AdsController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\AdsController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAmwEQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T22:24:23.335Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Views\\Anuncio\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Anuncio\\Index.cshtml",
-              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Views\\Anuncio\\Index.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Anuncio\\Index.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAmwCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-31T22:21:56.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\appsettings.json",
-              "RelativeDocumentMoniker": "WebApplication1\\appsettings.json",
-              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\appsettings.json",
-              "RelativeToolTip": "WebApplication1\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-01T13:32:10.401Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AdminUser.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Models\\AdminUser.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\AdminUser.cs",
-              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Models\\AdminUser.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\AdminUser.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAywBMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T13:29:36.042Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAmwDoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T11:55:58.001Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\Startup.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\wwwroot\\Startup.cs",
-              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\Startup.cs",
-              "RelativeToolTip": "WebApplication1\\wwwroot\\Startup.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAmwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T13:09:30.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "AnuncioViewModel.cs",
               "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Models\\AnuncioViewModel.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Models\\AnuncioViewModel.cs",
               "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Models\\AnuncioViewModel.cs",
               "RelativeToolTip": "WebApplication1\\Models\\AnuncioViewModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAmwCIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAmwCEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T13:34:52.731Z",
+              "WhenOpened": "2024-11-04T00:17:48.495Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Car.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Models\\Car.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\Car.cs",
-              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Models\\Car.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\Car.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Anuncio.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Models\\Anuncio.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\Anuncio.cs",
+              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Models\\Anuncio.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\Anuncio.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAmwBsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T22:28:16.566Z",
+              "WhenOpened": "2024-11-04T00:17:31.539Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 2,
               "Title": "AdViewModel.cs",
               "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Models\\AdViewModel.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Models\\AdViewModel.cs",
               "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Models\\AdViewModel.cs",
               "RelativeToolTip": "WebApplication1\\Models\\AdViewModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAADwvx0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA6wBwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T22:23:45.308Z",
+              "WhenOpened": "2024-11-04T00:17:18.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAwA0AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-31T22:41:23.335Z",
+              "DocumentIndex": 3,
+              "Title": "AnuncioController.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\AnuncioController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\AnuncioController.cs",
+              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\AnuncioController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\AnuncioController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAqwGoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T23:41:45.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAqwDkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T23:41:27.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdsController.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\AdsController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\AdsController.cs",
+              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\AdsController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\AdsController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAqwEQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T23:33:30.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ContactosController.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\ContactosController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ContactosController.cs",
+              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\ContactosController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\ContactosController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwBUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T23:33:46.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwCIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T23:33:53.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
+              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "WebApplication1\\Program.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAawC0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T00:01:10.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "WebApplication1\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAmwEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T00:01:28.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApplication1\\appsettings.json",
+              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\appsettings.json",
+              "RelativeToolTip": "WebApplication1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-04T00:02:04.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\Startup.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\wwwroot\\Startup.cs",
+              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\Startup.cs",
+              "RelativeToolTip": "WebApplication1\\wwwroot\\Startup.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T00:07:58.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LocationController.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\LocationController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\LocationController.cs",
+              "ToolTip": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\Controllers\\LocationController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\LocationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T23:33:57.77Z",
               "EditorCaption": ""
             }
           ]

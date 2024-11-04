@@ -19,8 +19,6 @@ namespace WebApplication1.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            // Configurações adicionais de modelo, se necessário
         }
 
         public void SeedAnuncios()

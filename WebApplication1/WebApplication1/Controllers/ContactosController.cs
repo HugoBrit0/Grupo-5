@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication1.Controllers
 {
-    [Authorize] 
+    [Authorize]
     public class ContactosController : Controller
     {
         public IActionResult Index()
@@ -14,7 +14,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public IActionResult EnviarMensagem(string nome, string email, string mensagem)
         {
-           
+
             TempData["MensagemEnviada"] = "A sua mensagem foi enviada com sucesso!";
             return RedirectToAction("Index");
         }

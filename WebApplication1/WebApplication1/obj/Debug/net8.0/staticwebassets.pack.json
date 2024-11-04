@@ -333,10 +333,6 @@
       "PackagePath": "staticwebassets\\uploads\\e3823c7d-bec4-439a-a46d-66f6ef3a3a54_carro1.jpg"
     },
     {
-      "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\f709d08a-46a5-4956-8825-18bcf1f2616c_pexels-therato-1933239.jpg",
-      "PackagePath": "staticwebassets\\uploads\\f709d08a-46a5-4956-8825-18bcf1f2616c_pexels-therato-1933239.jpg"
-    },
-    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

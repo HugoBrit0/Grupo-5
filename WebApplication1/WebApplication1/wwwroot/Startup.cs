@@ -1,4 +1,6 @@
 ﻿public void ConfigureServices(IServiceCollection services)
+
+
 {
     services.AddDbContext<ApplicationDbContext>(options =>
         options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -18,7 +20,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     // ... outros middlewares
 
     app.UseRouting();
-
+    app.UseHttpsRedirection();
     app.UseAuthentication();
     app.UseAuthorization();
 

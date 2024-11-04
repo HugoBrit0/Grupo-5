@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tnOBa0RKmo9Qat6Qlgw6ugM6e9N0ipewh+HEKMPkXJQ=",
+  "Hash": "fmb2DJe8YfWzAV7SHmkj8tBKpIIfylUP3QC/TDZJ8do=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -1611,25 +1611,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\e3823c7d-bec4-439a-a46d-66f6ef3a3a54_carro1.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\f709d08a-46a5-4956-8825-18bcf1f2616c_pexels-therato-1933239.jpg",
-      "SourceId": "WebApplication1",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
-      "BasePath": "_content/WebApplication1",
-      "RelativePath": "uploads/f709d08a-46a5-4956-8825-18bcf1f2616c_pexels-therato-1933239.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\f709d08a-46a5-4956-8825-18bcf1f2616c_pexels-therato-1933239.jpg"
     }
   ]
 }
