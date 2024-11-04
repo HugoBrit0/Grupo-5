@@ -4,9 +4,12 @@ using WebApplication1.Models;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApplication1.Controllers
+
 {
+    [Authorize]
     public class AnuncioController : Controller
     {
         private readonly ApplicationDbContext _context;
