@@ -1,0 +1,36 @@
+﻿@model WebApplication1.Models.Anuncio
+
+@{
+    ViewData["Title"] = "Detalhes do Anúncio";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="card">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            @if (!string.IsNullOrEmpty(Model.ImagePath))
+            {
+                <img src="@Model.ImagePath" class="card-img" alt="@Model.Titulo">
+            }
+            else
+            {
+                <img src="~/images/no-image.jpg" class="card-img" alt="Imagem não disponível">
+            }
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h3 class="card-title">@Model.Titulo</h3>
+                <p class="card-text"><strong>Descrição:</strong> @Model.Descricao</p>
+                <p class="card-text"><strong>Estado do Carro:</strong> @Model.EstadoCarro</p>
+                <p class="card-text"><strong>Quilometragem:</strong> @Model.Quilometragem km</p>
+                <p class="card-text"><strong>Telefone:</strong> @Model.Telefone</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Voltar para Lista</a>
+</div>

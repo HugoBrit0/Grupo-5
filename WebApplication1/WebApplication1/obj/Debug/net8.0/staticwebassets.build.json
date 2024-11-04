@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yKW2IGXsj40kjWYcYyaReHqdrlIDYQKQLmbBRcSEuRI=",
+  "Hash": "5KUd0QP7ryRSjgwTX67Qi1/DiV/P5x7t/mnn4j2ldYY=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -1592,6 +1592,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\e3823c7d-bec4-439a-a46d-66f6ef3a3a54_carro1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\eec8fb48-acc7-478e-82f2-61ccddd1797c_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/eec8fb48-acc7-478e-82f2-61ccddd1797c_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\eec8fb48-acc7-478e-82f2-61ccddd1797c_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png"
     }
   ]
 }

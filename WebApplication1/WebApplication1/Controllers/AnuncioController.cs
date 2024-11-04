@@ -64,6 +64,28 @@ namespace WebApplication1.Controllers
         {
             return View(await _context.Anuncios.ToListAsync());
         }
+
+        public IActionResult Details(int id)
+        {
+            var anuncio = _context.Anuncios.FirstOrDefault(a => a.Id == id);
+            if (anuncio == null)
+            {
+                return NotFound();
+            }
+            return View(anuncio);
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var anuncio = _context.Anuncios.FirstOrDefault(a => a.Id == id);
+            if (anuncio == null)
+            {
+                return NotFound();
+            }
+            return View(anuncio);
+        }
+
+
         // GET: Anuncio/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

@@ -1,0 +1,66 @@
+﻿@model WebApplication1.Models.Anuncio
+
+@{
+    ViewData["Title"] = "Editar Anúncio";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Edit" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Titulo" class="control-label"></label>
+        <input asp-for="Titulo" class="form-control" />
+        <span asp-validation-for="Titulo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Descricao" class="control-label"></label>
+        <textarea asp-for="Descricao" class="form-control" rows="3"></textarea>
+        <span asp-validation-for="Descricao" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EstadoCarro" class="control-label"></label>
+        <select asp-for="EstadoCarro" class="form-control">
+            <option value="Novo">Novo</option>
+            <option value="Usado">Usado</option>
+            <option value="Seminovo">Seminovo</option>
+        </select>
+        <span asp-validation-for="EstadoCarro" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Quilometragem" class="control-label"></label>
+        <input asp-for="Quilometragem" class="form-control" />
+        <span asp-validation-for="Quilometragem" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Telefone" class="control-label"></label>
+        <input asp-for="Telefone" class="form-control" />
+        <span asp-validation-for="Telefone" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImagePath" class="control-label">Imagem Atual</label>
+        @if (!string.IsNullOrEmpty(Model.ImagePath))
+        {
+            <img src="@Model.ImagePath" alt="Imagem Atual" style="max-width: 200px;" class="mb-2" />
+        }
+        <input type="file" name="NovaImagem" class="form-control-file" />
+    </div>
+
+    <div class="form-group mt-3">
+        <input type="submit" value="Salvar" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-secondary">Voltar para Lista</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
