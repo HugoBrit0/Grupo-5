@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5KUd0QP7ryRSjgwTX67Qi1/DiV/P5x7t/mnn4j2ldYY=",
+  "Hash": "Z5mDFhgXHqYTf9QFkMOjy5LdA2pXLsPg9IAhs2mNOhg=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -148,25 +148,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\77f7bcab-8c36-4fe2-88be-f1d2cf4cc0af_JuiceWRLD.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\images\\carro1.jpg",
-      "SourceId": "WebApplication1",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
-      "BasePath": "_content/WebApplication1",
-      "RelativePath": "images/carro1.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\carro1.jpg"
     },
     {
       "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\images\\carro3.jpg",
@@ -1499,6 +1480,25 @@
       "OriginalItemSpec": "wwwroot\\uploads\\2bcc8171-7d78-4802-a695-26b9a1b8c285_Captura de ecrã 2024-09-30 225838.png"
     },
     {
+      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\30b839c3-ee3a-41d3-8062-50298a2b4397_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/30b839c3-ee3a-41d3-8062-50298a2b4397_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\30b839c3-ee3a-41d3-8062-50298a2b4397_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png"
+    },
+    {
       "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\6d294c21-e85b-4727-8ec0-e5f10efc5d60_carro1.jpg",
       "SourceId": "WebApplication1",
       "SourceType": "Discovered",
@@ -1516,6 +1516,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\6d294c21-e85b-4727-8ec0-e5f10efc5d60_carro1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\6db8b644-cfd7-42f8-9a6f-ef7054e9a1c0_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/6db8b644-cfd7-42f8-9a6f-ef7054e9a1c0_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\6db8b644-cfd7-42f8-9a6f-ef7054e9a1c0_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png"
     },
     {
       "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\873b23ae-3572-4991-b31c-5f78c252dca0_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",

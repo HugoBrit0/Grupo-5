@@ -1,0 +1,88 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.form-element {
+    margin-bottom: 15px;
+}
+
+    .form-element input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s; /* Efeito de transição suave */
+    }
+
+        .form-element input:focus {
+            border-color: #007bff; /* Cor da borda ao focar */
+            outline: none; /* Remove o contorno padrão */
+        }
+
+    .form-element button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745; /* Cor do botão */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer; /* Muda o cursor ao passar o mouse */
+        transition: background-color 0.3s; /* Efeito de transição suave */
+    }
+
+        .form-element button:hover {
+            background-color: #218838; /* Cor do botão ao passar o mouse */
+        }
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+}
+
+.card-img-top {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do card */
+    height: 200px; /* Definindo uma altura fixa */
+    object-fit: cover; /* Mantém a proporção da imagem, cortando o excesso se necessário */
+}
+.testimonials-section {
+    background-color: #f8f9fa; /* Fundo claro */
+}
+
+.testimonial-card {
+    background-color: white; /* Fundo branco */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.testimonial-text {
+    font-size: 16px; /* Tamanho do texto */
+    margin: 10px 0; /* Margens superior e inferior */
+}
+
+.client-name {
+    font-weight: bold; /* Nome em negrito */
+    text-align: center; /* Centraliza o nome */
+}

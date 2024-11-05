@@ -16,6 +16,8 @@ namespace WebApplication1.Data
         public DbSet<Anuncio> Anuncios { get; set; }
         public DbSet<AdminUser> AdminUsers { get; set; }
 
+        public DbSet<UserProfile> UserProfiles { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

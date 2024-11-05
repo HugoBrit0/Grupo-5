@@ -95,9 +95,7 @@
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
 
-            <div class="form-element">
-                <p>Não tens uma conta? <a href="/Signup">Registar</a></p>
-            </div>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Registar</a>
 
             <div class="form-element">
                 <button type="submit">Login</button>

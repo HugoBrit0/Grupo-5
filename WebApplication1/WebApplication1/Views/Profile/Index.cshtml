@@ -1,0 +1,96 @@
+﻿@model WebApplication1.Models.UserProfile
+
+@{
+    ViewData["Title"] = "Perfil do Usuário";
+}
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CarGarage 2024</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        .profile-header {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .profile-stats {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-header text-center">
+        <img src="~/images/default-profile.jpg" alt="@Model.FullName" class="profile-img mb-3" />
+        <h1>@Model.FullName</h1>
+        <p class="lead">Membro desde @Model.DateJoined.ToString("MMMM yyyy")</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="profile-stats">
+                    <h4>Estatísticas</h4>
+                    <p><i class="fas fa-car"></i> Anúncios ativos: 5</p>
+                    <p><i class="fas fa-handshake"></i> Vendas concluídas: 3</p>
+                    <p><i class="fas fa-star"></i> Avaliação média: 4.8/5</p>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Informações do Perfil</h3>
+                        <p class="card-text"><i class="fas fa-user"></i> <strong>Username:</strong> @Model.Username</p>
+                        <p class="card-text"><i class="fas fa-envelope"></i> <strong>Email:</strong> @Model.Email</p>
+                        <p class="card-text"><i class="fas fa-phone"></i> <strong>Telefone:</strong> @Model.PhoneNumber</p>
+                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> <strong>Endereço:</strong> @Model.Address</p>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <a asp-action="Edit" class="btn btn-primary"><i class="fas fa-edit"></i> Editar Perfil</a>
+                    <a asp-controller="Anuncio" asp-action="Create" class="btn btn-success"><i class="fas fa-plus"></i> Criar Novo Anúncio</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <h3>Meus Anúncios Ativos</h3>
+                <div class="row">
+                    <!-- Exemplo de anúncio -->
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="~/images/carro-exemplo.jpg" class="card-img-top" alt="Carro exemplo">
+                            <div class="card-body">
+                                <h5 class="card-title">Volkswagen Golf</h5>
+                                <p class="card-text">Ano: 2018 | Km: 45.000</p>
+                                <a href="#" class="btn btn-sm btn-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Adicione mais anúncios conforme necessário -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+</body>
+</html>

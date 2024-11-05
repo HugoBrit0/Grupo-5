@@ -54,5 +54,43 @@ namespace WebApplication1.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Index", "Home");
         }
+
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(UserProfile model, string password)
+        {
+            if (ModelState.IsValid)
+            {
+                if (await _context.UserProfiles.AnyAsync(u => u.Username == model.Username || u.Email == model.Email))
+                {
+                    ModelState.AddModelError("", "Username ou Email já estão em uso.");
+                    return View(model);
+                }
+
+                model.DateJoined = DateTime.Now;
+
+                // Crie um novo AdminUser
+                var adminUser = new AdminUser
+                {
+                    Username = model.Username,
+                    Email = model.Email,
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(password),
+                    CreatedAt = DateTime.Now
+                };
+
+                _context.AdminUsers.Add(adminUser);
+                _context.UserProfiles.Add(model);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Login");
+            }
+
+            return View(model);
+        }
     }
 }

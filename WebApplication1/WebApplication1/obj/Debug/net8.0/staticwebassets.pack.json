@@ -37,10 +37,6 @@
       "PackagePath": "staticwebassets\\images\\JuiceWRLD.jpg"
     },
     {
-      "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\images\\carro1.jpg",
-      "PackagePath": "staticwebassets\\images\\carro1.jpg"
-    },
-    {
       "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\images\\carro3.jpg",
       "PackagePath": "staticwebassets\\images\\carro3.jpg"
     },
@@ -309,8 +305,16 @@
       "PackagePath": "staticwebassets\\uploads\\2bcc8171-7d78-4802-a695-26b9a1b8c285_Captura de ecrã 2024-09-30 225838.png"
     },
     {
+      "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\30b839c3-ee3a-41d3-8062-50298a2b4397_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
+      "PackagePath": "staticwebassets\\uploads\\30b839c3-ee3a-41d3-8062-50298a2b4397_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png"
+    },
+    {
       "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\6d294c21-e85b-4727-8ec0-e5f10efc5d60_carro1.jpg",
       "PackagePath": "staticwebassets\\uploads\\6d294c21-e85b-4727-8ec0-e5f10efc5d60_carro1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\6db8b644-cfd7-42f8-9a6f-ef7054e9a1c0_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
+      "PackagePath": "staticwebassets\\uploads\\6db8b644-cfd7-42f8-9a6f-ef7054e9a1c0_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png"
     },
     {
       "Id": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\873b23ae-3572-4991-b31c-5f78c252dca0_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
