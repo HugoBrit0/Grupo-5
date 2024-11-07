@@ -24,22 +24,39 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-
+        //login
         [HttpPost]
         public async Task<IActionResult> Login(string username, string password)
         {
-            var user = await _context.AdminUsers.FirstOrDefaultAsync(u => u.Username == username);
+            // Primeiro, verifique na tabela AdminUsers
+            var adminUser = await _context.AdminUsers.FirstOrDefaultAsync(u => u.Username == username);
+
+            if (adminUser != null && BCrypt.Net.BCrypt.Verify(password, adminUser.PasswordHash))
+            {
+                var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, adminUser.Username),
+            new Claim(ClaimTypes.Role, "Admin")
+        };
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+
+                return RedirectToAction("Index", "Home");
+            }
+
+            // Agora verifique na tabela UserProfiles
+            var user = await _context.UserProfiles.FirstOrDefaultAsync(u => u.Username == username);
 
             if (user != null && BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
             {
                 var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, user.Username),
-                    new Claim(ClaimTypes.Role, "Admin")
-                };
+        {
+            new Claim(ClaimTypes.Name, user.Username),
+            new Claim(ClaimTypes.Role, "User")
+        };
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
                 return RedirectToAction("Index", "Home");
@@ -49,12 +66,16 @@ namespace WebApplication1.Controllers
             return View();
         }
 
+
+
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Index", "Home");
         }
 
+        
+        //Registo
         [HttpGet]
         public IActionResult Register()
         {
@@ -62,35 +83,33 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(UserProfile model, string password)
         {
             if (ModelState.IsValid)
             {
+                // Verifica se o nome de usuário ou email já estão em uso
                 if (await _context.UserProfiles.AnyAsync(u => u.Username == model.Username || u.Email == model.Email))
                 {
-                    ModelState.AddModelError("", "Username ou Email já estão em uso.");
+                    ModelState.AddModelError("", "Nome de usuário ou email já estão em uso.");
                     return View(model);
                 }
 
+                // Cria o hash da senha
+                model.PasswordHash = BCrypt.Net.BCrypt.HashPassword(password);
                 model.DateJoined = DateTime.Now;
+                model.IsAdmin = false; // Define como usuário regular
 
-                // Crie um novo AdminUser
-                var adminUser = new AdminUser
-                {
-                    Username = model.Username,
-                    Email = model.Email,
-                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(password),
-                    CreatedAt = DateTime.Now
-                };
-
-                _context.AdminUsers.Add(adminUser);
+                // Adiciona o novo usuário ao contexto
                 _context.UserProfiles.Add(model);
                 await _context.SaveChangesAsync();
 
-                return RedirectToAction("Login");
+                return RedirectToAction("Login", "Account"); // Redireciona para a página de login
             }
 
-            return View(model);
+            return View(model); // Retorna a view com erros se houver
         }
+
+
     }
 }

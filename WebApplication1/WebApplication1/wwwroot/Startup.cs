@@ -9,13 +9,14 @@
 
     services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
         .AddCookie(options =>
+        services.AddAuthorization(options =>
         {
-            options.LoginPath = "/Account/Login";
-            options.AccessDeniedPath = "/Account/AccessDenied";
+            options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+            options.AddPolicy("UserOrAdmin", policy => policy.RequireRole("User", "Admin"));
         });
-}
 
-public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
     // ... outros middlewares
 
