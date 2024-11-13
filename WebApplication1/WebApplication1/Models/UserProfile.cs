@@ -22,5 +22,6 @@ namespace WebApplication1.Models
         public string Address { get; set; } = string.Empty;
         public DateTime DateJoined { get; set; }
         public bool IsAdmin { get; set; }
+        public string? ProfilePicturePath { get; set; }
     }
 }

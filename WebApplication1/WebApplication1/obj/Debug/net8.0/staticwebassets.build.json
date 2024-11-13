@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ubgswjTcPZw5MPdaC8jRDmEAjHRnS6Q0xy5/YdZeQ8A=",
+  "Hash": "zY1k4/81p6QQLCNqD0/TdbD1N3Pn+Asm5D7sKnZI/Sg=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -1537,6 +1537,25 @@
       "OriginalItemSpec": "wwwroot\\uploads\\30b839c3-ee3a-41d3-8062-50298a2b4397_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png"
     },
     {
+      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\3b2f046b-6e3b-46bf-a3cc-0a5c4835e076_cat-5320572_1280.jpg",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/3b2f046b-6e3b-46bf-a3cc-0a5c4835e076_cat-5320572_1280.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\3b2f046b-6e3b-46bf-a3cc-0a5c4835e076_cat-5320572_1280.jpg"
+    },
+    {
       "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\44e5d8e1-d661-46de-bd5c-b84c2ec130d9_cat-5320572_1280.jpg",
       "SourceId": "WebApplication1",
       "SourceType": "Discovered",
@@ -1592,25 +1611,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\6db8b644-cfd7-42f8-9a6f-ef7054e9a1c0_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png"
-    },
-    {
-      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\75dba441-4874-4256-885e-fef935021420_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
-      "SourceId": "WebApplication1",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
-      "BasePath": "_content/WebApplication1",
-      "RelativePath": "uploads/75dba441-4874-4256-885e-fef935021420_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\75dba441-4874-4256-885e-fef935021420_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png"
     },
     {
       "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\873b23ae-3572-4991-b31c-5f78c252dca0_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
@@ -1670,6 +1670,25 @@
       "OriginalItemSpec": "wwwroot\\uploads\\a91ecb8f-e164-4caf-9b26-d2a712baaf4f_carro1.jpg"
     },
     {
+      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\ab3d3776-79c0-43a2-9810-e002ad7a7ec7_Captura de ecrã 2024-09-30 225655.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/ab3d3776-79c0-43a2-9810-e002ad7a7ec7_Captura de ecrã 2024-09-30 225655.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ab3d3776-79c0-43a2-9810-e002ad7a7ec7_Captura de ecrã 2024-09-30 225655.png"
+    },
+    {
       "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\e3823c7d-bec4-439a-a46d-66f6ef3a3a54_carro1.jpg",
       "SourceId": "WebApplication1",
       "SourceType": "Discovered",
@@ -1687,6 +1706,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\e3823c7d-bec4-439a-a46d-66f6ef3a3a54_carro1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\e3ca9c1a-eee9-4587-be5d-43f14a75cd48_cat-5320572_1280.jpg",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/e3ca9c1a-eee9-4587-be5d-43f14a75cd48_cat-5320572_1280.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\e3ca9c1a-eee9-4587-be5d-43f14a75cd48_cat-5320572_1280.jpg"
     },
     {
       "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\eec8fb48-acc7-478e-82f2-61ccddd1797c_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
