@@ -36,7 +36,8 @@ namespace WebApplication1.Controllers
                 var claims = new List<Claim>
         {
             new Claim(ClaimTypes.Name, adminUser.Username),
-            new Claim(ClaimTypes.Role, "Admin")
+            new Claim(ClaimTypes.Role, "Admin"),
+            new Claim("ProfilePicturePath", "/images/default-admin.jpg") // Caminho padrão para admin
         };
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -53,7 +54,8 @@ namespace WebApplication1.Controllers
                 var claims = new List<Claim>
         {
             new Claim(ClaimTypes.Name, user.Username),
-            new Claim(ClaimTypes.Role, "User")
+            new Claim(ClaimTypes.Role, "User"),
+            new Claim("ProfilePicturePath", user.ProfilePicturePath ?? "/images/default-profile.jpg")
         };
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -65,6 +67,7 @@ namespace WebApplication1.Controllers
             ModelState.AddModelError("", "Nome de usuário ou senha inválidos");
             return View();
         }
+
 
 
 

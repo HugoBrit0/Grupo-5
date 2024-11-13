@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zY1k4/81p6QQLCNqD0/TdbD1N3Pn+Asm5D7sKnZI/Sg=",
+  "Hash": "Tglfyd8p7ApsNabfjA2XkfhKp1c8LAB08AXmX9N8A4A=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -1480,6 +1480,25 @@
       "OriginalItemSpec": "wwwroot\\uploads\\1cb544c1-d23b-4a6b-9594-5346f1e90d23_pexels-therato-1933239.jpg"
     },
     {
+      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\298e9363-1668-42b5-9148-734851232907_cat-5320572_1280.jpg",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/298e9363-1668-42b5-9148-734851232907_cat-5320572_1280.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\298e9363-1668-42b5-9148-734851232907_cat-5320572_1280.jpg"
+    },
+    {
       "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\2a065cb6-d7aa-4907-830b-58188af24e7d_JuiceWRLD.jpg",
       "SourceId": "WebApplication1",
       "SourceType": "Discovered",
@@ -1516,6 +1535,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\2bcc8171-7d78-4802-a695-26b9a1b8c285_Captura de ecrã 2024-09-30 225838.png"
+    },
+    {
+      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\2bd4b16c-2db5-4ac0-997a-83334e4a1e39_cat-5320572_1280.jpg",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/2bd4b16c-2db5-4ac0-997a-83334e4a1e39_cat-5320572_1280.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\2bd4b16c-2db5-4ac0-997a-83334e4a1e39_cat-5320572_1280.jpg"
     },
     {
       "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\30b839c3-ee3a-41d3-8062-50298a2b4397_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
