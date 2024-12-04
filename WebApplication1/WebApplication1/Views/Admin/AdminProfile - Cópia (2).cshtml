@@ -1,0 +1,37 @@
+﻿@model IEnumerable<WebApplication1.Models.AdminUser>
+
+@{
+    ViewData["Title"] = "Lista de Administradores";
+}
+
+<div class="container mt-5">
+    <h2>@ViewData["Title"]</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome de Usuário</th>
+                <th>Email</th>
+                <th>Data de Criação</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var admin in Model)
+            {
+                <tr>
+                    <td>@admin.Username</td>
+                    <td>@admin.Email</td>
+                    <td>@admin.CreatedAt.ToShortDateString()</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@admin.Id" class="btn btn-info">Editar</a>
+                        <!-- Adicione outras ações conforme necessário -->
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Adicione um botão para adicionar novos administradores -->
+    <a asp-action="Create" class="btn btn-primary">Adicionar Administrador</a> <!-- Se você tiver uma ação Create -->
+</div>

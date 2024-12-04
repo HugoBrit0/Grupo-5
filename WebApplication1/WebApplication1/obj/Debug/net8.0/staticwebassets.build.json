@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Tglfyd8p7ApsNabfjA2XkfhKp1c8LAB08AXmX9N8A4A=",
+  "Hash": "gCVBG0R3+uoCEKvJSmpOSqEPaIQs1bjULkRuS33SjpU=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -1573,25 +1573,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\30b839c3-ee3a-41d3-8062-50298a2b4397_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png"
-    },
-    {
-      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\3b2f046b-6e3b-46bf-a3cc-0a5c4835e076_cat-5320572_1280.jpg",
-      "SourceId": "WebApplication1",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
-      "BasePath": "_content/WebApplication1",
-      "RelativePath": "uploads/3b2f046b-6e3b-46bf-a3cc-0a5c4835e076_cat-5320572_1280.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\3b2f046b-6e3b-46bf-a3cc-0a5c4835e076_cat-5320572_1280.jpg"
     },
     {
       "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\44e5d8e1-d661-46de-bd5c-b84c2ec130d9_cat-5320572_1280.jpg",

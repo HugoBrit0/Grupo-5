@@ -1,0 +1,6 @@
+C:\Users\gonca\source\repos\Grupo-5\WebApplication1\WebGarageAdminDB\bin\Debug\WebGarageAdminDB.dacpac
+C:\Users\gonca\source\repos\Grupo-5\WebApplication1\WebGarageAdminDB\bin\Debug\WebGarageAdminDB.dll
+C:\Users\gonca\source\repos\Grupo-5\WebApplication1\WebGarageAdminDB\bin\Debug\WebGarageAdminDB.pdb
+C:\Users\gonca\source\repos\Grupo-5\WebApplication1\WebGarageAdminDB\obj\Debug\WebGarageAdminDB.sqlproj.AssemblyReference.cache
+C:\Users\gonca\source\repos\Grupo-5\WebApplication1\WebGarageAdminDB\obj\Debug\WebGarageAdminDB.dll
+C:\Users\gonca\source\repos\Grupo-5\WebApplication1\WebGarageAdminDB\obj\Debug\WebGarageAdminDB.pdb

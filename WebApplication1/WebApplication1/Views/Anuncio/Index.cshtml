@@ -6,13 +6,21 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<p>
-    <a asp-action="Create" class="btn btn-primary">Criar Novo Anúncio</a>
-    <a href="@Url.Action("Index", "Anuncio", new { nocache = DateTime.Now.Ticks })" class="btn btn-secondary">Atualizar Lista</a>
-</p>
+<div class="d-flex align-items-center mb-3">
+    <a asp-action="Create" class="btn btn-primary me-2">Criar Novo Anúncio</a>
+    <a href="@Url.Action("Index", "Anuncio", new { nocache = DateTime.Now.Ticks })" class="btn btn-secondary me-2">Atualizar Lista</a>
+    <form asp-action="Index" method="get" class="d-flex">
+        <input type="text" name="searchString" class="form-control me-2" placeholder="Pesquisar anúncios..." />
+        <input type="submit" value="Pesquisar" class="btn btn-primary" />
+    </form>
+</div>
+
 
 @if (Model.Any())
 {
+        
+
+   
     <div class="row">
         @foreach (var item in Model)
         {

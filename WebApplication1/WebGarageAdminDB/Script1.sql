@@ -1,0 +1,248 @@
+﻿DROP DATABASE [WebGarageAdminDB]
+CREATE DATABASE [WebGarageAdminDB]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'WebGarageAdminDB', FILENAME = N'C:\Users\gonca\WebGarageAdminDB.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'WebGarageAdminDB_log', FILENAME = N'C:\Users\gonca\WebGarageAdminDB_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT
+GO
+ALTER DATABASE [WebGarageAdminDB] SET COMPATIBILITY_LEVEL = 150
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [WebGarageAdminDB].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [WebGarageAdminDB] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET AUTO_CLOSE ON 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET  ENABLE_BROKER 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET  MULTI_USER 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [WebGarageAdminDB] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [WebGarageAdminDB] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+ALTER DATABASE [WebGarageAdminDB] SET QUERY_STORE = OFF
+GO
+USE [WebGarageAdminDB]
+GO
+/****** Object:  Table [dbo].[AdminUsers]    Script Date: 03/12/2024 14:50:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[AdminUsers](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Username] [nvarchar](50) NOT NULL,
+	[PasswordHash] [nvarchar](255) NOT NULL,
+	[Email] [nvarchar](100) NOT NULL,
+	[CreatedAt] [datetime2](7) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[Username] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[Email] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Ads]    Script Date: 03/12/2024 14:50:09 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Ads](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Title] [nvarchar](100) NOT NULL,
+	[Description] [nvarchar](max) NULL,
+	[Price] [decimal](10, 2) NULL,
+	[ImagePath] [nvarchar](255) NULL,
+	[CreatedAt] [datetime2](7) NOT NULL,
+	[UpdatedAt] [datetime2](7) NOT NULL,
+	[CreatedBy] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  View [dbo].[vw_AdsWithCreator]    Script Date: 03/12/2024 14:50:09 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE VIEW [dbo].[vw_AdsWithCreator] AS
+SELECT a.Id, a.Title, a.Description, a.Price, a.ImagePath, a.CreatedAt, a.UpdatedAt, u.Username as CreatedByUser
+FROM Ads a
+INNER JOIN AdminUsers u ON a.CreatedBy = u.Id;
+GO
+/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 03/12/2024 14:50:09 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[__EFMigrationsHistory](
+	[MigrationId] [nvarchar](150) NOT NULL,
+	[ProductVersion] [nvarchar](32) NOT NULL,
+ CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY CLUSTERED 
+(
+	[MigrationId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Anuncios]    Script Date: 03/12/2024 14:50:09 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Anuncios](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Titulo] [nvarchar](100) NOT NULL,
+	[Descricao] [nvarchar](max) NOT NULL,
+	[EstadoCarro] [nvarchar](50) NOT NULL,
+	[Quilometragem] [int] NOT NULL,
+	[Telefone] [nvarchar](20) NOT NULL,
+	[ImagePath] [nvarchar](255) NULL,
+	[UserProfileId] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[UserProfiles]    Script Date: 03/12/2024 14:50:09 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[UserProfiles](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[IdentityUserId] [nvarchar](450) NULL,
+	[Username] [nvarchar](256) NULL,
+	[Email] [nvarchar](256) NULL,
+	[FullName] [nvarchar](256) NULL,
+	[PhoneNumber] [nvarchar](50) NULL,
+	[Address] [nvarchar](500) NULL,
+	[DateJoined] [datetime2](7) NULL,
+	[IsAdmin] [bit] NOT NULL,
+	[PasswordHash] [nvarchar](max) NULL,
+	[ProfilePicturePath] [varchar](255) NULL,
+	[AdminUserId] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Index [IX_Ads_CreatedAt]    Script Date: 03/12/2024 14:50:09 ******/
+CREATE NONCLUSTERED INDEX [IX_Ads_CreatedAt] ON [dbo].[Ads]
+(
+	[CreatedAt] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[AdminUsers] ADD  DEFAULT (getdate()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[Ads] ADD  DEFAULT (getdate()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[Ads] ADD  DEFAULT (getdate()) FOR [UpdatedAt]
+GO
+ALTER TABLE [dbo].[UserProfiles] ADD  DEFAULT ((0)) FOR [IsAdmin]
+GO
+ALTER TABLE [dbo].[Ads]  WITH CHECK ADD FOREIGN KEY([CreatedBy])
+REFERENCES [dbo].[AdminUsers] ([Id])
+GO
+ALTER TABLE [dbo].[Ads]  WITH CHECK ADD  CONSTRAINT [FK_Ads_AdminUsers] FOREIGN KEY([CreatedBy])
+REFERENCES [dbo].[AdminUsers] ([Id])
+GO
+ALTER TABLE [dbo].[Ads] CHECK CONSTRAINT [FK_Ads_AdminUsers]
+GO
+ALTER TABLE [dbo].[Anuncios]  WITH CHECK ADD  CONSTRAINT [FK_Anuncios_UserProfiles] FOREIGN KEY([UserProfileId])
+REFERENCES [dbo].[UserProfiles] ([Id])
+GO
+ALTER TABLE [dbo].[Anuncios] CHECK CONSTRAINT [FK_Anuncios_UserProfiles]
+GO
+ALTER TABLE [dbo].[UserProfiles]  WITH CHECK ADD  CONSTRAINT [FK_UserProfiles_AdminUsers] FOREIGN KEY([AdminUserId])
+REFERENCES [dbo].[AdminUsers] ([Id])
+GO
+ALTER TABLE [dbo].[UserProfiles] CHECK CONSTRAINT [FK_UserProfiles_AdminUsers]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_InsertAd]    Script Date: 03/12/2024 14:50:09 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[sp_InsertAd]
+    @Title NVARCHAR(100),
+    @Description NVARCHAR(MAX),
+    @Price DECIMAL(10, 2),
+    @ImagePath NVARCHAR(255),
+    @CreatedBy INT
+AS
+BEGIN
+    INSERT INTO Ads (Title, Description, Price, ImagePath, CreatedBy)
+    VALUES (@Title, @Description, @Price, @ImagePath, @CreatedBy);
+    
+    SELECT SCOPE_IDENTITY() AS NewAdId;
+END
+GO
+USE [master]
+GO
+ALTER DATABASE [WebGarageAdminDB] SET  READ_WRITE 
+GO

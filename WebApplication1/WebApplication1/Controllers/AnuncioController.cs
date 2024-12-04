@@ -7,7 +7,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 
 namespace WebApplication1.Controllers
-
 {
     [Authorize]
     public class AnuncioController : Controller
@@ -40,18 +39,14 @@ namespace WebApplication1.Controllers
                     {
                         Directory.CreateDirectory(uploadsFolder);
                     }
-
                     var uniqueFileName = Guid.NewGuid().ToString() + "_" + imagem.FileName;
                     var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
                     using (var fileStream = new FileStream(filePath, FileMode.Create))
                     {
                         await imagem.CopyToAsync(fileStream);
                     }
-
                     anuncio.ImagePath = "/uploads/" + uniqueFileName;
                 }
-
                 _context.Add(anuncio);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -60,19 +55,17 @@ namespace WebApplication1.Controllers
             return View(anuncio);
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Anuncios.ToListAsync());
-        }
+            var anuncios = from a in _context.Anuncios
+                           select a;
 
-        public IActionResult Details(int id)
-        {
-            var anuncio = _context.Anuncios.FirstOrDefault(a => a.Id == id);
-            if (anuncio == null)
+            if (!String.IsNullOrEmpty(searchString))
             {
-                return NotFound();
+                anuncios = anuncios.Where(s => s.Titulo.Contains(searchString));
             }
-            return View(anuncio);
+
+            return View(await anuncios.ToListAsync());
         }
 
         public IActionResult Edit(int id)
@@ -85,26 +78,21 @@ namespace WebApplication1.Controllers
             return View(anuncio);
         }
 
-
-        // GET: Anuncio/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-
             var anuncio = await _context.Anuncios
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (anuncio == null)
             {
                 return NotFound();
             }
-
             return View(anuncio);
         }
 
-        // POST: Anuncio/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -112,7 +100,6 @@ namespace WebApplication1.Controllers
             var anuncio = await _context.Anuncios.FindAsync(id);
             if (anuncio != null)
             {
-                // Se houver uma imagem associada, exclua-a
                 if (!string.IsNullOrEmpty(anuncio.ImagePath))
                 {
                     var imagePath = Path.Combine(_environment.WebRootPath, anuncio.ImagePath.TrimStart('/'));
@@ -121,10 +108,8 @@ namespace WebApplication1.Controllers
                         System.IO.File.Delete(imagePath);
                     }
                 }
-
                 _context.Anuncios.Remove(anuncio);
             }
-
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
