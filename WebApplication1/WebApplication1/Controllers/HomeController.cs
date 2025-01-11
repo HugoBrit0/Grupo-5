@@ -1,23 +1,29 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+using Microsoft.EntityFrameworkCore;
+using WebApplication1.Data;
 using WebApplication1.Models;
-using Microsoft.AspNetCore.Authorization;
+using System.Diagnostics;
 
 namespace WebApplication1.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var anunciosDestacados = await _context.Anuncios
+                .Where(a => a.Destaque)
+                .ToListAsync();
+
+            return View(anunciosDestacados);
         }
 
         public IActionResult Privacy()
@@ -25,7 +31,6 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        [AllowAnonymous]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

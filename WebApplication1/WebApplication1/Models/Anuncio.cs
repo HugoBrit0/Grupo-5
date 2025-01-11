@@ -24,5 +24,7 @@ namespace WebApplication1.Models
         public string Telefone { get; set; }
 
         public string? ImagePath { get; set; }
+
+        public bool Destaque { get; set; }
     }
 }

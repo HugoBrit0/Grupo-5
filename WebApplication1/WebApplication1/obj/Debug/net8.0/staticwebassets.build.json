@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gCVBG0R3+uoCEKvJSmpOSqEPaIQs1bjULkRuS33SjpU=",
+  "Hash": "6lSyrOJK6pm77h4MZhb0r77RNoHh0VnJFOwQkMWyqpE=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -1575,12 +1575,12 @@
       "OriginalItemSpec": "wwwroot\\uploads\\30b839c3-ee3a-41d3-8062-50298a2b4397_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png"
     },
     {
-      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\44e5d8e1-d661-46de-bd5c-b84c2ec130d9_cat-5320572_1280.jpg",
+      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\33bd8e17-3641-4634-9ae6-2e55b2e9a585_Seat-Ibiza-FR-8-scaled_925x520_acf_cropped-925x520.jpg.webp",
       "SourceId": "WebApplication1",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/WebApplication1",
-      "RelativePath": "uploads/44e5d8e1-d661-46de-bd5c-b84c2ec130d9_cat-5320572_1280.jpg",
+      "RelativePath": "uploads/33bd8e17-3641-4634-9ae6-2e55b2e9a585_Seat-Ibiza-FR-8-scaled_925x520_acf_cropped-925x520.jpg.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1591,7 +1591,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\44e5d8e1-d661-46de-bd5c-b84c2ec130d9_cat-5320572_1280.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\33bd8e17-3641-4634-9ae6-2e55b2e9a585_Seat-Ibiza-FR-8-scaled_925x520_acf_cropped-925x520.jpg.webp"
     },
     {
       "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\6d294c21-e85b-4727-8ec0-e5f10efc5d60_carro1.jpg",
@@ -1632,6 +1632,44 @@
       "OriginalItemSpec": "wwwroot\\uploads\\6db8b644-cfd7-42f8-9a6f-ef7054e9a1c0_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png"
     },
     {
+      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\77668f87-9965-47c6-93e1-725e55438ad8_Yamaha Tracer 700.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/77668f87-9965-47c6-93e1-725e55438ad8_Yamaha Tracer 700.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\77668f87-9965-47c6-93e1-725e55438ad8_Yamaha Tracer 700.png"
+    },
+    {
+      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\8596f9d9-ba01-4b16-ba1d-3acc0a53a72c_Mazda-MX-5.jpg",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/8596f9d9-ba01-4b16-ba1d-3acc0a53a72c_Mazda-MX-5.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\8596f9d9-ba01-4b16-ba1d-3acc0a53a72c_Mazda-MX-5.jpg"
+    },
+    {
       "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\873b23ae-3572-4991-b31c-5f78c252dca0_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
       "SourceId": "WebApplication1",
       "SourceType": "Discovered",
@@ -1670,6 +1708,25 @@
       "OriginalItemSpec": "wwwroot\\uploads\\96e03011-465a-4b8e-b640-0ff5c522dc19_Captura de ecrã 2024-09-30 225655.png"
     },
     {
+      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\a6e0f4be-3fe6-4635-b0db-7759beeab5e4_Yamaha dt125R.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/a6e0f4be-3fe6-4635-b0db-7759beeab5e4_Yamaha dt125R.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\a6e0f4be-3fe6-4635-b0db-7759beeab5e4_Yamaha dt125R.png"
+    },
+    {
       "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\a91ecb8f-e164-4caf-9b26-d2a712baaf4f_carro1.jpg",
       "SourceId": "WebApplication1",
       "SourceType": "Discovered",
@@ -1689,12 +1746,12 @@
       "OriginalItemSpec": "wwwroot\\uploads\\a91ecb8f-e164-4caf-9b26-d2a712baaf4f_carro1.jpg"
     },
     {
-      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\ab3d3776-79c0-43a2-9810-e002ad7a7ec7_Captura de ecrã 2024-09-30 225655.png",
+      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\be47fcdb-7157-4016-b77b-499ffe097222_Opel Corsa B Gsi.jpg",
       "SourceId": "WebApplication1",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
       "BasePath": "_content/WebApplication1",
-      "RelativePath": "uploads/ab3d3776-79c0-43a2-9810-e002ad7a7ec7_Captura de ecrã 2024-09-30 225655.png",
+      "RelativePath": "uploads/be47fcdb-7157-4016-b77b-499ffe097222_Opel Corsa B Gsi.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1705,7 +1762,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\ab3d3776-79c0-43a2-9810-e002ad7a7ec7_Captura de ecrã 2024-09-30 225655.png"
+      "OriginalItemSpec": "wwwroot\\uploads\\be47fcdb-7157-4016-b77b-499ffe097222_Opel Corsa B Gsi.jpg"
     },
     {
       "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\e3823c7d-bec4-439a-a46d-66f6ef3a3a54_carro1.jpg",
@@ -1746,6 +1803,25 @@
       "OriginalItemSpec": "wwwroot\\uploads\\e3ca9c1a-eee9-4587-be5d-43f14a75cd48_cat-5320572_1280.jpg"
     },
     {
+      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\e5c30807-a04b-49d3-adff-88db40e7cdc2_wallpaperChillguys.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/e5c30807-a04b-49d3-adff-88db40e7cdc2_wallpaperChillguys.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\e5c30807-a04b-49d3-adff-88db40e7cdc2_wallpaperChillguys.png"
+    },
+    {
       "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\eec8fb48-acc7-478e-82f2-61ccddd1797c_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png",
       "SourceId": "WebApplication1",
       "SourceType": "Discovered",
@@ -1763,6 +1839,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\eec8fb48-acc7-478e-82f2-61ccddd1797c_Juice-WRLD-bb06-2019-feat-billboard-jciojkgfruh-1500.png"
+    },
+    {
+      "Identity": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\ffdbf211-5f88-46a5-a998-28f32a753f79_audi a4 avant.jpg",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gonca\\source\\repos\\Grupo-5\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/ffdbf211-5f88-46a5-a998-28f32a753f79_audi a4 avant.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ffdbf211-5f88-46a5-a998-28f32a753f79_audi a4 avant.jpg"
     }
   ]
 }

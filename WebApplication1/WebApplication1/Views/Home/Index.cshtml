@@ -53,41 +53,31 @@
     </header>
 
 
-    <main class="container my-5">
-        <h2 class="text-center mb-4" data-aos="fade-up">Destaques</h2>
-        <div class="row">
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+    @model IEnumerable<WebApplication1.Models.Anuncio>
+
+    @{
+        ViewData["Title"] = "Página Inicial";
+    }
+
+    <h2 class="text-center mb-4">Anúncios em Destaque</h2>
+
+    <div class="row">
+        @foreach (var anuncio in Model)
+        {
+            <div class="col-md-4 mb-4">
                 <div class="card shadow-sm">
-                    <img src="~/images/carro1.jpg" class="card-img-top" alt="Carro 1">
+                    <img src="@anuncio.ImagePath" class="card-img-top" alt="@anuncio.Titulo">
                     <div class="card-body">
-                        <h5 class="card-title">Audi A4</h5>
-                        <p class="card-text">Audi A4 B5 1.9 TDI, ideal para quem procura conforto e desempenho em longas viagens.</p>
-                        <a href="@Url.Action("Details", "Cars", new { id = 1 })" class="btn btn-primary">Ver mais</a>
+                        <h5 class="card-title">@anuncio.Titulo</h5>
+                        <p class="card-text">@anuncio.Descricao</p>
+                        <a asp-action="Details" asp-route-id="@anuncio.Id" class="btn btn-primary">Ver mais</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card shadow-sm">
-                    <img src="~/images/carro2.jpg" class="card-img-top" alt="Carro 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Volkswagen Golf</h5>
-                        <p class="card-text">Volkswagen Golf 7, conhecido pela sua eficiência de combustível e conforto.</p>
-                        <a href="@Url.Action("Details", "Cars", new { id = 2 })" class="btn btn-primary">Ver mais</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card shadow-sm">
-                    <img src="~/images/carro3.jpg" class="card-img-top" alt="Carro 3">
-                    <div class="card-body">
-                        <h5 class="card-title">BMW Série 3</h5>
-                        <p class="card-text">BMW Série 3, um ícone de desportividade e elegância.</p>
-                        <a href="@Url.Action("Details", "Cars", new { id = 3 })" class="btn btn-primary">Ver mais</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+        }
+        }
+    </div>
+
 
  
     <section class="story-section py-5" data-aos="fade-up">

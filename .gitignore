@@ -6,3 +6,5 @@
 *.vsidx
 /WebApplication1/.vs/WebApplication1/FileContentIndex/c9971bb3-e07e-4582-9f0e-edbadb00bdce.vsidx
 /WebApplication1/.vs/WebApplication1/FileContentIndex/df3c6237-2d7a-4862-be66-aae50e472611.vsidx
+WebApplication1/WebGarageAdminDB/WebGarageAdminDB.dbmdl
+WebApplication1/WebGarageAdminDB/WebGarageAdminDB.jfm

@@ -28,17 +28,14 @@ namespace WebApplication1.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Titulo,Descricao,EstadoCarro,Quilometragem,Telefone")] Anuncio anuncio, IFormFile imagem)
+        public async Task<IActionResult> Create([Bind("Titulo,Descricao,EstadoCarro,Quilometragem,Telefone,Destaque")] Anuncio anuncio, IFormFile imagem)
         {
             if (ModelState.IsValid)
             {
                 if (imagem != null && imagem.Length > 0)
                 {
                     var uploadsFolder = Path.Combine(_environment.WebRootPath, "uploads");
-                    if (!Directory.Exists(uploadsFolder))
-                    {
-                        Directory.CreateDirectory(uploadsFolder);
-                    }
+                    Directory.CreateDirectory(uploadsFolder);
                     var uniqueFileName = Guid.NewGuid().ToString() + "_" + imagem.FileName;
                     var filePath = Path.Combine(uploadsFolder, uniqueFileName);
                     using (var fileStream = new FileStream(filePath, FileMode.Create))
@@ -78,6 +75,38 @@ namespace WebApplication1.Controllers
             return View(anuncio);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Titulo,Descricao,EstadoCarro,Quilometragem,Telefone,Destaque,ImagePath")] Anuncio anuncio)
+        {
+            if (id != anuncio.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(anuncio);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!AnuncioExists(anuncio.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(anuncio);
+        }
+
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -112,6 +141,24 @@ namespace WebApplication1.Controllers
             }
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ToggleDestaque(int id)
+        {
+            var anuncio = await _context.Anuncios.FindAsync(id);
+            if (anuncio == null)
+            {
+                return NotFound();
+            }
+            anuncio.Destaque = !anuncio.Destaque;
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool AnuncioExists(int id)
+        {
+            return _context.Anuncios.Any(e => e.Id == id);
         }
     }
 }

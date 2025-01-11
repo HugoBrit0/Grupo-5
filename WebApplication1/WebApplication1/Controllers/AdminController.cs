@@ -18,26 +18,21 @@ namespace WebApplication1.Controllers
             _context = context;
         }
 
-        // GET: Admin/Profile
         public async Task<IActionResult> Profile()
         {
             var userId = User.FindFirstValue("UserId");
-
             if (string.IsNullOrEmpty(userId))
             {
                 return NotFound();
             }
-
             var adminUser = await _context.AdminUsers.FindAsync(int.Parse(userId));
             if (adminUser == null)
             {
                 return NotFound();
             }
-
             return View("AdminProfile", adminUser);
         }
 
-        // GET: Admin/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
             var adminUser = await _context.AdminUsers.FindAsync(id);
@@ -48,7 +43,6 @@ namespace WebApplication1.Controllers
             return View(adminUser);
         }
 
-        // POST: Admin/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, AdminUser model)
@@ -57,7 +51,6 @@ namespace WebApplication1.Controllers
             {
                 return NotFound();
             }
-
             if (ModelState.IsValid)
             {
                 try
